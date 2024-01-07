@@ -23,7 +23,7 @@
       <a href="https://www.linkedin.com/in/aniketpatidar/" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">LinkedIn</a>
       <a href="https://github.com/aniketpatidar" class="text-sm font-semibold text-gray-900">Github <span aria-hidden="true">&rarr;</span></a>
     </div>
-    <div class="w-[300px] rounded-md border mt-10 flex items-center justify-center gap-x-6">
+    <div class="w-[300px] rounded-md border mt-10">
       <!-- <img
         src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsb2d8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60"
         alt="Laptop"
@@ -60,6 +60,58 @@
         </div>
       </div>
     </div>
+    <div class="w-[300px] rounded-md border mt-10"></div>
+      <div class="p-4">
+        <h1 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl px-3">Articles</h1>
+        <div id="app" class="mx-auto my-8"></div>
+      </div>
+    </div>
   </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const response = await fetch('https://api.hashnode.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          query: `
+            query {
+              user(username:"aniketpatidar") {
+                publication {
+                  posts(page:0) {
+                    title
+                    brief
+                    slug
+                    cuid
+                  }
+                }
+              }
+            }
+          `,
+        }),
+      });
+
+      const data = await response.json();
+      const posts = data.data.user.publication.posts;
+
+      const appContainer = document.getElementById('app');
+      appContainer.innerHTML = renderPosts(posts);
+    });
+
+    function renderPosts(posts) {
+      debugger
+      return posts.map(post => `
+      <div class="w-[300px] rounded-md border mt-10">
+        <div class="bg-white p-4 my-4 rounded shadow">
+          <h2 class="text-2xl font-bold mt-4 text-base leading-7 text-gray-800 px-3">${post.title}</h2>
+          <p class="text-gray-600 text-base leading-7 px-3">${post.brief}</p>
+          <a href="https://aniketpatidar.hashnode.dev/${post.slug}-${post.cuid}" class="text-blue-500 hover:underline mt-4 text-base leading-7 text-gray-600 px-3" target="_blank" rel="noopener noreferrer">Read more</a>
+        </div>
+      </div>
+      `).join('');
+    }
+
+  </script>
 </body>
 </html>
