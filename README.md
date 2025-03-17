@@ -1,3 +1,1 @@
-# Hello, I'm Aniket Patidar 👋
-
-🌐 https://aniketpatidar.me/
+https://aniketpatidar.github.io/
