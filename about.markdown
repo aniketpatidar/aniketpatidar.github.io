@@ -4,15 +4,17 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+## Who Am I?
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+<img src="/images/IMG_20230408_173432_928.jpg" alt="aniket-avatar" style="max-width:400px;"/>
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+My name is Aniket Patidar, and I'm a software engineer living in India 🇮🇳
 
+I enjoy writing. I started this blog as a way of motivating myself into making meaningful contributions.
 
-[jekyll-organization]: https://github.com/jekyll
+Most of these writings are Ruby and Rails posts with a few smatterings of opinion with regard to developer life.
+
+I really enjoy and love building websites and web-applications with Ruby and Rails. Every day, I try to learn something new in Ruby and Rails and write about it.
+
+Join me for more chai-fueled content!
+<!-- If you'd like to work with me, please send me an email. If you have a Rails app that you need to build/maintain/enhance, or build/migrate a website to Rails, get in touch. -->
