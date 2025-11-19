@@ -29,6 +29,16 @@ linkedin_username: aniketpatidar
 
 # Build settings
 theme: minima
+minima:
+  skin: dark
+  social_links:
+    - { title: "GitHub", url: "https://github.com/aniketpatidar", icon: "github" }
+    - { title: "Twitter", url: "https://twitter.com/aniketpatidar01", icon: "twitter" }
+    - { title: "LinkedIn", url: "https://linkedin.com/in/aniketpatidar", icon: "linkedin" }
+
+author:
+  name: Aniket Patidar
+  email: aniketpatidar01@gmail.com
 plugins:
   - jekyll-feed
 
