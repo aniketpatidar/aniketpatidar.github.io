@@ -20,7 +20,7 @@ Do check out Moneygun if you want to build your next B2B SaaS app (software as a
 
 [![](https://cdn.hashnode.com/res/hashnode/image/upload/v1751806188505/251884e9-cc45-4543-a204-0a066a36b808.png align="center")](https://x.com/yarotheslav/status/1934196524633706540)
 
-There are two things that need to be implemented. 
+There are two things that need to be implemented. 
 
 * In-app notifications
     
@@ -81,24 +81,24 @@ end
 #
 # MembershipRequestAcceptedNotifier.with(record: @post, message: "New post").deliver(User.all)
 class MembershipRequestAcceptedNotifier < ApplicationNotifier
- # Add your delivery methods
- #
- # deliver_by :email do |config|
- #   config.mailer = "UserMailer"
- #   config.method = "new_post"
- # end
- #
- # bulk_deliver_by :slack do |config|
- #   config.url = -> { Rails.application.credentials.slack_webhook_url }
- # end
- #
- # deliver_by :custom do |config|
- #   config.class = "MyDeliveryMethod"
- # end
+ # Add your delivery methods
  #
- # Add required params
- #
- # required_param :message
+ # deliver_by :email do |config|
+ #   config.mailer = "UserMailer"
+ #   config.method = "new_post"
+ # end
+ #
+ # bulk_deliver_by :slack do |config|
+ #   config.url = -> { Rails.application.credentials.slack_webhook_url }
+ # end
+ #
+ # deliver_by :custom do |config|
+ #   config.class = "MyDeliveryMethod"
+ # end
+ #
+ # Add required params
+ #
+ # required_param :message
 end
 ```
 
@@ -108,24 +108,24 @@ end
 #
 # MembershipInvitationNotifier.with(record: @post, message: "New post").deliver(User.all)
 class MembershipInvitationNotifier < ApplicationNotifier
- # Add your delivery methods
- #
- # deliver_by :email do |config|
- #   config.mailer = "UserMailer"
- #   config.method = "new_post"
- # end
- #
- # bulk_deliver_by :slack do |config|
- #   config.url = -> { Rails.application.credentials.slack_webhook_url }
- # end
- #
- # deliver_by :custom do |config|
- #   config.class = "MyDeliveryMethod"
- # end
+ # Add your delivery methods
  #
- # Add required params
- #
- # required_param :message
+ # deliver_by :email do |config|
+ #   config.mailer = "UserMailer"
+ #   config.method = "new_post"
+ # end
+ #
+ # bulk_deliver_by :slack do |config|
+ #   config.url = -> { Rails.application.credentials.slack_webhook_url }
+ # end
+ #
+ # deliver_by :custom do |config|
+ #   config.class = "MyDeliveryMethod"
+ # end
+ #
+ # Add required params
+ #
+ # required_param :message
 end
 ```
 
@@ -137,16 +137,16 @@ So we need to notify the user when he is invited to an organization. First, clea
 
 ```ruby
 class MembershipInvitationNotifier < ApplicationNotifier
- # Add your delivery methods
- #
- # deliver_by :email do |config|
- #   config.mailer = "UserMailer"
- #   config.method = "new_post"
- # end
+ # Add your delivery methods
  #
- # Add required params
- #
- # required_param :message
+ # deliver_by :email do |config|
+ #   config.mailer = "UserMailer"
+ #   config.method = "new_post"
+ # end
+ #
+ # Add required params
+ #
+ # required_param :message
 end
 ```
 
@@ -154,26 +154,26 @@ Notifiers can use different helper methods. Inside a notification\_methods block
 
 ```ruby
 notification_methods do
-   # I18n helpers
-   def message
-     t(".message")
-   end
+   # I18n helpers
+   def message
+     t(".message")
+   end
 
-   # URL helpers are accessible in notifications
-   # Don't forget to set your default_url_options so Rails knows how to generate urls
-   def url
-     user_invitations_url
-   end
- end
+   # URL helpers are accessible in notifications
+   # Don't forget to set your default_url_options so Rails knows how to generate urls
+   def url
+     user_invitations_url
+   end
+ end
 ```
 
 These helpers can be helpful when rendering a user’s notifications on the web.
 
 ```erb
 <div>
-  <% @user.notifications.each do |notification| %>
-    <%= link_to notification.message, notification.url %>
-  <% end %>
+  <% @user.notifications.each do |notification| %>
+    <%= link_to notification.message, notification.url %>
+  <% end %>
 </div>
 ```
 
@@ -182,22 +182,22 @@ Calling the message helper in the ERB view will look for the following translati
 ```yaml
 # config/locales/en.yml
 en:
- notifiers:
-   membership_invitation_notifier:
-     notification:
-       message: You've been invited to join %{organization_name}
+ notifiers:
+   membership_invitation_notifier:
+     notification:
+       message: You've been invited to join %{organization_name}
 ```
 
 Notifiers can choose required parameters using the `required_params`method. We need to declare `:organization` as a required parameter to ensure `params[:organization]` is available in our notifier:
 
 ```ruby
- required_params :organization
+ required_params :organization
 ```
 
 ```ruby
- def message
-   t(".message", organization_name: params[:organization].name)
- end
+ def message
+   t(".message", organization_name: params[:organization].name)
+ end
 ```
 
 In this case, we need the mailer, so generate it by running
@@ -209,15 +209,15 @@ rails generate mailer MembershipMailer invitation_email
 ```ruby
 # app/mailers/membership_mailer.rb
 class MembershipMailer < ApplicationMailer
-  # Subject can be set in your I18n file at config/locales/en.yml
-  # with the following lookup:
-  #
-  #   en.membership_mailer.invitation_email.subject
-  #
-  def invitation_email
-    @greeting = "Hi"
-    mail to: "to@example.org"
-  end
+  # Subject can be set in your I18n file at config/locales/en.yml
+  # with the following lookup:
+  #
+  #   en.membership_mailer.invitation_email.subject
+  #
+  def invitation_email
+    @greeting = "Hi"
+    mail to: "to@example.org"
+  end
 end
 ```
 
@@ -233,9 +233,9 @@ Instead of using this default greeting, we want to send our message and include 
 
 ```ruby
 deliver_by :email do |config|
-  config.mailer = "MembershipMailer"
-  config.method = :invitation_email
-  config.args   = -> { [ self ] }
+  config.mailer = "MembershipMailer"
+  config.method = :invitation_email
+  config.args   = -> { [ self ] }
 end
 ```
 
@@ -244,19 +244,19 @@ Now we need to make a small change to our mailer method.
 ```ruby
 # app/mailers/membership_mailer.rb
 class MembershipMailer < ApplicationMailer
-  def invitation_email(notification)
-    setup(notification)
-    mail(to: @recipient.email, subject: t(".subject", organization_name: @organization.name))
-  end
+  def invitation_email(notification)
+    setup(notification)
+    mail(to: @recipient.email, subject: t(".subject", organization_name: @organization.name))
+  end
 
-  private
+  private
 
-  def setup(notification)
-    @organization = notification.params[:organization]
-    @message = notification.message
-    @recipient = notification.recipient
-    @action_url = notification.url
-  end
+  def setup(notification)
+    @organization = notification.params[:organization]
+    @message = notification.message
+    @recipient = notification.recipient
+    @action_url = notification.url
+  end
 end
 ```
 
@@ -271,28 +271,28 @@ Now our notifier code looks like this:
 
 ```ruby
 class MembershipInvitationNotifier < ApplicationNotifier
-  # Add your delivery methods
-  deliver_by :email do |config|
-    config.mailer = "MembershipMailer"
-    config.method = :invitation_email
-    config.args   = -> { [ self ] }
-  end
+  # Add your delivery methods
+  deliver_by :email do |config|
+    config.mailer = "MembershipMailer"
+    config.method = :invitation_email
+    config.args   = -> { [ self ] }
+  end
 
-  # Add required params
-  required_params :organization
+  # Add required params
+  required_params :organization
 
-  notification_methods do
-    # I18n helpers
+  notification_methods do
+    # I18n helpers
     def message
       t(".message", organization_name: params[:organization].name)
     end
 
-    # URL helpers are accessible in notifications
-    # Don't forget to set your default_url_options so Rails knows how to generate urls
-    def url
-      user_invitations_url
-    end
-  end
+    # URL helpers are accessible in notifications
+    # Don't forget to set your default_url_options so Rails knows how to generate urls
+    def url
+      user_invitations_url
+    end
+  end
 end
 ```
 
@@ -301,13 +301,13 @@ Our notifier setup is now complete. Next, we need to trigger this notifier:
 ```ruby
 # app/models/membership.rb
 class Membership < ApplicationRecord
-  after_create :send_invitation_notification
+  after_create :send_invitation_notification
 
-  private
+  private
 
-  def send_invitation_notification
-    MembershipInvitationNotifier.with(organization: organization).deliver(user)
-  end
+  def send_invitation_notification
+    MembershipInvitationNotifier.with(organization: organization).deliver(user)
+  end
 end
 ```
 
