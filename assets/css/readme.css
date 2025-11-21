@@ -1,0 +1,75 @@
+#readme {
+  line-height: 1.6;
+}
+
+#readme img {
+  max-width: 100%;
+  height: auto;
+}
+
+#readme pre {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 16px;
+  border-radius: 6px;
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#readme code {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 85%;
+}
+
+#readme pre code {
+  background: transparent;
+  padding: 0;
+}
+
+#readme table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+#readme table th,
+#readme table td {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px 13px;
+}
+
+#readme table th {
+  background: rgba(255, 255, 255, 0.05);
+  font-weight: 600;
+}
+
+#readme blockquote {
+  border-left: 4px solid rgba(255, 255, 255, 0.2);
+  padding-left: 1em;
+  opacity: 0.8;
+  margin: 1em 0;
+}
+
+#readme h1,
+#readme h2,
+#readme h3,
+#readme h4,
+#readme h5,
+#readme h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+#readme h1 {
+  font-size: 2em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.3em;
+}
+
+#readme h2 {
+  font-size: 1.5em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.3em;
+}

@@ -29,7 +29,7 @@ Here's a collection of projects I've built, ranging from full-stack applications
 
 ---
 
-### RubyBattle • [GitHub](https://github.com/aniketpatidar/rubybattle)
+### [RubyBattle](/projects/rubybattle/) • [GitHub](https://github.com/aniketpatidar/rubybattle)
 
 > Unified Q&A and coding-challenge platform for developers. A comprehensive platform combining Q&A functionality with coding challenges, built to help developers learn and compete.
 
@@ -39,7 +39,7 @@ Here's a collection of projects I've built, ranging from full-stack applications
 
 ---
 
-### AI Thumbnail Generator • [GitHub](https://github.com/aniketpatidar/ai-thumbnail-generator) • [Live Demo](https://ai-thumbnail-generator-ashen.vercel.app)
+### [AI Thumbnail Generator](/projects/ai-thumbnail-generator/) • [GitHub](https://github.com/aniketpatidar/ai-thumbnail-generator) • [Live Demo](https://ai-thumbnail-generator-ashen.vercel.app)
 
 > Generate eye-catching thumbnails in seconds. Upload a photo, add context, and get AI-crafted results instantly. Perfect for content creators.
 
@@ -49,7 +49,7 @@ Here's a collection of projects I've built, ranging from full-stack applications
 
 ---
 
-### Code Challenges • [GitHub](https://github.com/aniketpatidar/code-challenges)
+### [Code Challenges](/projects/code-challenges/) • [GitHub](https://github.com/aniketpatidar/code-challenges)
 
 > Full-stack coding challenge platform. Users can register, browse challenges, submit solutions, and track progress. Admins can create and manage challenges.
 
@@ -58,7 +58,7 @@ Here's a collection of projects I've built, ranging from full-stack applications
 
 ---
 
-### TweetHub • [GitHub](https://github.com/aniketpatidar/tweethub)
+### [TweetHub](/projects/tweethub/) • [GitHub](https://github.com/aniketpatidar/tweethub)
 
 > A minimal Twitter-style app where users can create accounts, post tweets, edit/delete them, and attach images.
 
@@ -67,7 +67,7 @@ Here's a collection of projects I've built, ranging from full-stack applications
 
 ---
 
-### FastAPI Audio Transcription • [GitHub](https://github.com/aniketpatidar/fastapi-project)
+### [FastAPI Audio Transcription](/projects/fastapi-project/) • [GitHub](https://github.com/aniketpatidar/fastapi-project)
 
 > FastAPI application for handling audio transcription using OpenAI's models.
 
@@ -76,7 +76,7 @@ Here's a collection of projects I've built, ranging from full-stack applications
 
 ---
 
-### Interview Bot • [GitHub](https://github.com/aniketpatidar/interview-bot-fastapi)
+### [Interview Bot](/projects/interview-bot-fastapi/) • [GitHub](https://github.com/aniketpatidar/interview-bot-fastapi)
 
 > Audio transcription service for interview recordings powered by OpenAI.
 
@@ -85,7 +85,7 @@ Here's a collection of projects I've built, ranging from full-stack applications
 
 ---
 
-### Contribs Tracker • [GitHub](https://github.com/aniketpatidar/contribs-tracker) • [Live Demo](https://contribs-tracker.vercel.app/)
+### [Contribs Tracker](/projects/contribs-tracker/) • [GitHub](https://github.com/aniketpatidar/contribs-tracker) • [Live Demo](https://contribs-tracker.vercel.app/)
 
 > A tool to explore GitHub contributions with better visualization and insights.
 
@@ -94,7 +94,7 @@ Here's a collection of projects I've built, ranging from full-stack applications
 
 ---
 
-### Ruby LLM Chat • [GitHub](https://github.com/aniketpatidar/ruby-llm-chat)
+### [Ruby LLM Chat](/projects/ruby-llm-chat/) • [GitHub](https://github.com/aniketpatidar/ruby-llm-chat)
 
 > LLM-powered chat interface built with Ruby on Rails and RubyLLM.
 
@@ -103,7 +103,7 @@ Here's a collection of projects I've built, ranging from full-stack applications
 
 ---
 
-### Tokenizer • [GitHub](https://github.com/aniketpatidar/tokenizer)
+### [Tokenizer](/projects/tokenizer/) • [GitHub](https://github.com/aniketpatidar/tokenizer)
 
 > Simple tokenizer implementation in JavaScript.
 
@@ -111,7 +111,7 @@ Here's a collection of projects I've built, ranging from full-stack applications
 
 ---
 
-### 30 Days of JavaScript Challenge • [GitHub](https://github.com/aniketpatidar/30-days-of-Javascript-challenge)
+### [30 Days of JavaScript Challenge](/projects/30-days-javascript/) • [GitHub](https://github.com/aniketpatidar/30-days-of-Javascript-challenge)
 
 > Daily coding exercises covering JavaScript fundamentals and advanced concepts.
 
@@ -119,7 +119,7 @@ Here's a collection of projects I've built, ranging from full-stack applications
 
 ---
 
-### LeetCode Solutions • [GitHub](https://github.com/aniketpatidar/Leetcode) • [LeetCode Profile](https://leetcode.com/aniketpatidar01)
+### [LeetCode Solutions](/projects/leetcode/) • [GitHub](https://github.com/aniketpatidar/Leetcode) • [LeetCode Profile](https://leetcode.com/aniketpatidar01)
 
 > Collection of LeetCode problem solutions to ace coding interviews.
 
@@ -128,7 +128,7 @@ Here's a collection of projects I've built, ranging from full-stack applications
 
 ---
 
-### Rails RSpec Capybara Test • [GitHub](https://github.com/aniketpatidar/Rails-RSpec-Capybara-test)
+### [Rails RSpec Capybara Test](/projects/rails-rspec-capybara/) • [GitHub](https://github.com/aniketpatidar/Rails-RSpec-Capybara-test)
 
 > Testing setup and examples with RSpec and Capybara for Rails applications.
 
