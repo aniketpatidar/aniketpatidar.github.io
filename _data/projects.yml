@@ -40,15 +40,6 @@
   images:
     - /assets/images/tweethub/Screenshot from 2024-06-22 11-05-10.png
 
-- title: FastAPI Audio Transcription
-  url: /projects/fastapi-project/
-  github: https://github.com/aniketpatidar/fastapi-project
-  description: FastAPI application for handling audio transcription using OpenAI's models.
-  badges:
-    - name: Python
-    - name: FastAPI
-  images: []
-
 - title: Interview Bot
   url: /projects/interview-bot-fastapi/
   github: https://github.com/aniketpatidar/interview-bot-fastapi
