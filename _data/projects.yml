@@ -58,7 +58,7 @@
     - name: TypeScript
     - name: Next.js
   images:
-    - /assets/images/contribs-tracker/image-1.png
+    - /assets/images/contribs-tracker/Screenshot from 2025-11-26 23-46-50.png
 
 - title: Ruby LLM Chat
   url: /projects/ruby-llm-chat/
