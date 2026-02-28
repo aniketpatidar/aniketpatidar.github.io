@@ -1,5 +1,3 @@
-# Rails Performance Monitoring: A Primer for Developers
-
 "Rails is slow." 
 
 It’s a phrase many developers hear throughout their careers. However, Rails isn’t inherently slow; it becomes slow when we make expensive mistakes in our code and lack the visibility to find them. This guide breaks down a top-down approach to monitoring and fixing performance issues to ensure your application scales effectively.
@@ -10,7 +8,9 @@ To fix performance, you first need data. APM tools like New Relic, Datadog, or S
 
 ### Key Metrics to Watch:
 Request Queuing: This measures how long a request waits before being processed by your server. Ideally, this should be between 20ms and 50ms. If it’s higher, your servers are overloaded; if it’s consistently lower, you might be over-paying for hardware.
+
 Top Transactions: Don't guess what's slow. Look at your most frequent and slowest endpoints to identify which areas of your code will provide the biggest performance gain when fixed.
+
 Object Allocation: High memory usage is often caused by creating too many Ruby objects. For example, using `Product.all` on a large database will spike memory. Instead, use `find_each` to load records in small batches.
 
 ## 2. Profiling and Benchmarking
@@ -18,6 +18,7 @@ Object Allocation: High memory usage is often caused by creating too many Ruby o
 Once you know which page is slow, you need to find the specific line of code responsible.
 
 Profiling: Tools like rack-mini-profiler allow you to see exactly how much time is spent on SQL queries vs. rendering directly in your browser. It provides a "backtrace" so you can link a slow query to the exact file and line in your Rails app.
+
 Benchmarking: If you think a code change will make things faster, you must prove it. Using tools like Benchmark IPS (Iterations Per Second) allows you to compare the "Before" and "After" of your changes with statistical accuracy.
 
 ## 3. Common Performance Killers
