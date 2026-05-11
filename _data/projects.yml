@@ -1,5 +1,4 @@
 - title: CodeKata
-  url: /projects/codekata/
   github: https://github.com/aniketpatidar/codekata
   description: A competitive coding platform for Ruby developers. Solve challenges, compete in multi-round games against friends, collaborate in real-time, and discuss solutions in the community forum.
   badges:
@@ -9,7 +8,6 @@
   images: []
 
 - title: AI Thumbnail Generator
-  url: /projects/ai-thumbnail-generator/
   github: https://github.com/aniketpatidar/ai-thumbnail-generator
   live: https://ai-thumbnail-generator-ashen.vercel.app
   description: Generate eye-catching thumbnails in seconds. Upload a photo, add context, and get AI-crafted results instantly.
@@ -30,7 +28,6 @@
   images: []
 
 - title: Contributions
-  url: /projects/contributions/
   github: https://github.com/aniketpatidar/contributions
   live: https://contributions.aniketpatidar.com/
   description: Aniket's open-source contributions.

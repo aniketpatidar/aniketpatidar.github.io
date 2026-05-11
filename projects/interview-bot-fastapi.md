@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Projects
+title: Interview Bot
 nav_exclude: true
 owner: aniketpatidar
 repo: interview-bot-fastapi

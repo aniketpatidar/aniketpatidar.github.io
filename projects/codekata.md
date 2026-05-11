@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Projects
+title: CodeKata
 nav_exclude: true
 owner: aniketpatidar
 repo: codekata

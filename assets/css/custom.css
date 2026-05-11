@@ -1,0 +1,16 @@
+.breadcrumb {
+  font-size: 0.85rem;
+  color: #8b949e;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--minima-border-color, #333);
+}
+
+.breadcrumb a {
+  color: #2ea043;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}

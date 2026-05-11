@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Projects
+title: Contributions
 nav_exclude: true
 owner: aniketpatidar
 repo: contributions

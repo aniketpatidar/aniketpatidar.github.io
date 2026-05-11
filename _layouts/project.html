@@ -2,6 +2,10 @@
 layout: page
 ---
 
+<nav class="breadcrumb">
+  <a href="/projects/">Projects</a> / {{ page.title }}
+</nav>
+
 {{ content }}
 
 {% if page.fetch_readme != false %}
@@ -16,7 +20,7 @@ layout: page
 </div>
 <div id="readme"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js" integrity="sha384-zbcZAIxlvJtNE3Dp5nxLXdXtXyxwOdnILY1TDPVmKFhl4r4nSUG1r8bcFXGVa4Te" crossorigin="anonymous"></script>
 <script src="{{ '/assets/js/readme-loader.js' | relative_url }}"></script>
 <script>
   loadReadme('{{ page.owner }}', '{{ page.repo }}', '{{ page.branch }}');

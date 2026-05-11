@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Projects
+title: AI Thumbnail Generator
 nav_exclude: true
 owner: aniketpatidar
 repo: ai-thumbnail-generator
