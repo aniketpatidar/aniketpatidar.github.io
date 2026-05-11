@@ -3,7 +3,7 @@ layout: project
 title: Projects
 nav_exclude: true
 owner: aniketpatidar
-repo: contribs-tracker
+repo: contributions
 branch: main
-permalink: /projects/contribs-tracker/
+permalink: /projects/contributions/
 ---

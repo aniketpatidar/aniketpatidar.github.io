@@ -6,8 +6,6 @@ permalink: /projects/
 
 <link rel="stylesheet" href="/assets/css/projects.css">
 
-Here's a collection of projects I've built, ranging from full-stack applications to AI-powered tools and learning experiments.
-
 <div class="projects-grid">
   {% for project in site.data.projects %}
     <div class="project-card">
@@ -46,5 +44,7 @@ Here's a collection of projects I've built, ranging from full-stack applications
         </div>
       </div>
     </div>
-  {% endfor %}
+
+{% endfor %}
+
 </div>

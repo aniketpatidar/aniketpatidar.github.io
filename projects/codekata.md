@@ -3,7 +3,7 @@ layout: project
 title: Projects
 nav_exclude: true
 owner: aniketpatidar
-repo: 30-days-of-Javascript-challenge
+repo: codekata
 branch: main
-permalink: /projects/30-days-javascript/
+permalink: /projects/codekata/
 ---

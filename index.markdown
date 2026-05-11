@@ -4,6 +4,10 @@ title: About
 nav_exclude: true
 ---
 
+<style>
+.post-header { display: none; }
+</style>
+
 ## Who Am I?
 
 <img src="/images/IMG_20230408_173432_928.jpg" alt="aniket-avatar" style="max-width:400px;"/>
