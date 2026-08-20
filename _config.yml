@@ -22,7 +22,7 @@ title: Aniket Patidar
 email: aniketpatidar01@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://aniketpatidar.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: aniketpatidar01
 github_username:  aniketpatidar
 linkedin_username: aniketpatidar
@@ -42,6 +42,7 @@ author:
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
+  - jekyll-sitemap
 
 collections:
   projects:
