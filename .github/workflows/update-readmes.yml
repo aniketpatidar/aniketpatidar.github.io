@@ -1,0 +1,39 @@
+name: Update Project READMEs
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readmes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Fetch and update READMEs
+        run: |
+          chmod +x scripts/fetch_readmes.rb
+          ruby scripts/fetch_readmes.rb
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git add _projects/
+          
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Auto update project READMEs"
+            git push
+          fi

@@ -36,3 +36,5 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 gem "bigdecimal", "~> 4.1"
 gem "logger", "~> 1.7"
+gem "front_matter_parser"
+gem "nokogiri"

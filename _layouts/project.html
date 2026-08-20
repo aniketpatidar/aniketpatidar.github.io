@@ -6,23 +6,8 @@ layout: page
   <a href="/projects/">Projects</a> / {{ page.title }}
 </nav>
 
-{{ content }}
-
-{% if page.fetch_readme != false %}
 <link rel="stylesheet" href="{{ '/assets/css/readme.css' | relative_url }}">
 
-<div id="readme-loading" style="padding: 2rem 0; text-align: center; color: #666;">
-  Loading README...
+<div id="readme">
+  {{ content }}
 </div>
-<div id="readme-error"
-  style="display: none; padding: 2rem; background: #fee; border: 1px solid #fcc; border-radius: 4px; color: #c33;">
-  <strong>Error:</strong> <span id="error-message"></span>
-</div>
-<div id="readme"></div>
-
-<script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js" integrity="sha384-zbcZAIxlvJtNE3Dp5nxLXdXtXyxwOdnILY1TDPVmKFhl4r4nSUG1r8bcFXGVa4Te" crossorigin="anonymous"></script>
-<script src="{{ '/assets/js/readme-loader.js' | relative_url }}"></script>
-<script>
-  loadReadme('{{ page.owner }}', '{{ page.repo }}', '{{ page.branch }}');
-</script>
-{% endif %}
