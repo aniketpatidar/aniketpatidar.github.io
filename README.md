@@ -1,6 +1,7 @@
 # [Aniket's Dev Diary](https://aniketpatidar.com/)
 
 https://aniketpatidar.com/
+
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fd695752-1b1e-4a37-8798-d4888b82888e" />
 
 https://aniketpatidar.github.io/about/
