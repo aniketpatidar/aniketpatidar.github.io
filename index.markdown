@@ -2,6 +2,8 @@
 layout: home
 title: Home
 nav_exclude: true
+image: /images/IMG_20230408_173432_928.jpg
+type: website
 ---
 
 <style>
@@ -20,4 +22,21 @@ nav_exclude: true
   </div>
 </div>
 
-<h3 style="margin-top: 2rem; margin-bottom: 2rem;">Join me for more chai-fueled content!</h3>
+<h2 style="margin-top: 2rem; margin-bottom: 2rem;">Join me for more chai-fueled content!</h2>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Aniket Patidar",
+  "url": "https://aniketpatidar.com",
+  "image": "https://aniketpatidar.com/images/IMG_20230408_173432_928.jpg",
+  "jobTitle": "Software Engineer",
+  "description": "Software Engineer living in India. I enjoy writing and building web applications with Ruby on Rails.",
+  "sameAs": [
+    "https://github.com/aniketpatidar",
+    "https://twitter.com/aniketpatidar01",
+    "https://linkedin.com/in/aniketpatidar"
+  ]
+}
+</script>
