@@ -1,0 +1,20 @@
+# Aniket Patidar
+
+This is the personal website of Aniket Patidar, a software engineer living in India. 
+The site primarily contains blog posts about Ruby, Ruby on Rails, and software engineering.
+
+## When to use this site
+- You need information about Aniket Patidar, his projects, or his professional background.
+- You are looking for articles, tutorials, or opinions on Ruby on Rails.
+- You need contact information or a summary of his experience.
+
+## Site Structure
+- `/`: The homepage with a brief introduction.
+- `/about/`: More detailed information about Aniket.
+- `/contact/`: How to get in touch.
+- `/privacy/`: Privacy policy and terms.
+- `/projects/`: A list of projects.
+- `/sitemap.xml`: Full map of all pages.
+
+## Agent Guidelines
+Please respect robots.txt. Markdown representations of pages are available via standard content negotiation.

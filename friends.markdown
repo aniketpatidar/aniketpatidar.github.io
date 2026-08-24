@@ -2,6 +2,7 @@
 layout: page
 title: Friends
 permalink: /friends/
+nav_exclude: true
 ---
 
 ## Friends and thinkers I admire

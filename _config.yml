@@ -39,6 +39,8 @@ minima:
 author:
   name: Aniket Patidar
   email: aniketpatidar01@gmail.com
+  description: Software Engineer living in India. I enjoy writing and building web applications with Ruby on Rails.
+image: /images/IMG_20230408_173432_928.jpg
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
