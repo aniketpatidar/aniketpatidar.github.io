@@ -2,7 +2,10 @@
 layout: post
 title: "Building a Centralized Magic Link Auth for Payload CMS"
 permalink: /building-a-centralized-magic-link-auth-for-payload-cms/
+image: /images/payload-cms-auth.png
 ---
+
+![Payload CMS Magic Link Auth](/images/payload-cms-auth.png)
 
 Recently, I decided to migrate my personal website, aniketpatidar.com, from GitHub Pages to Payload CMS (hosted at cms.aniketpatidar.com). 
 
