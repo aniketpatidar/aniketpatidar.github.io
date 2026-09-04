@@ -1,0 +1,24 @@
+name: Cross Post
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - '_posts/**'
+  workflow_dispatch:
+
+jobs:
+  cross-post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Cross Post to Hashnode
+        uses: gautamkrishnar/cross-post@v3
+        with:
+          feed_url: 'https://aniketpatidar.com/feed.xml'
+          hashnode_key: ${{ secrets.HASHNODE_TOKEN }}
+          hashnode_publication_id: ${{ secrets.HASHNODE_PUBLICATION_ID }}
