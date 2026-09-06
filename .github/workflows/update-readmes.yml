@@ -23,6 +23,7 @@ jobs:
 
       - name: Fetch and update READMEs
         run: |
+          echo "HELLO I AM THE NEW WORKFLOW (Commit: $(git rev-parse HEAD))"
           gem install front_matter_parser nokogiri
           chmod +x scripts/fetch_readmes.rb
           ruby scripts/fetch_readmes.rb
