@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+require 'bundler/setup'
 require 'net/http'
 require 'uri'
 require_relative 'lib/project_file'
