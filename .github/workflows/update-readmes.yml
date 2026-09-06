@@ -35,7 +35,7 @@ jobs:
           
           git add _projects/
           
-          if ! git diff-index --quiet HEAD; then
+          if ! git diff-index --cached --quiet HEAD; then
             git commit -m "Auto update project READMEs"
             git push
           fi
