@@ -24,7 +24,7 @@ jobs:
       - name: Fetch and update READMEs
         run: |
           chmod +x scripts/fetch_readmes.rb
-          ruby scripts/fetch_readmes.rb
+          bundle exec ruby scripts/fetch_readmes.rb
 
       - name: Commit and push changes
         run: |
