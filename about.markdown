@@ -4,10 +4,10 @@ title: About
 permalink: /about/
 ---
 
-My name is Aniket Patidar, a software engineer based in India with over four years of experience, primarily with Ruby on Rails. I've built APIs, worked mostly with PostgreSQL, and integrated third-party services. My work spans both backend and frontend development, from Rails backends to single-page applications in TypeScript, React.js, and Next.js.
+I'm Aniket Patidar, a software engineer based in India with over four years of experience. I work mainly with Ruby on Rails on the backend and TypeScript, React.js, and Next.js on the frontend, with PostgreSQL as my go-to database.
 
-Through my work on [Kreditz](https://kreditz.com), a financial AI-technology platform focused on credit and risk decisioning, I've worked in fintech and open banking, leading the production migration of their API application from Rails 6.1 to Rails 8.0.1, building Yapily Open Banking integrations for consent and financial transaction data, and developing lending and credit-scoring workflows. Over the past year I've also been spending more time building with AI, combining LLMs, RAG, and vector search in projects like [MyWearToday](https://myweartoday.com).
+At [Kreditz](https://kreditz.com), a financial AI-technology platform for credit and risk decisioning, I led the production migration of their API from Rails 6.1 to Rails 8.0.1. I built Yapily Open Banking integrations for consent and financial transaction data, and developed lending and credit-scoring workflows that help process credit decisions. Recently I've been combining LLMs, RAG, and vector search in projects like [MyWearToday](https://myweartoday.com), exploring how AI can enhance real products.
 
-I regularly contribute to open source. Merged work spans [Moneygun](https://github.com/yshmarov/moneygun) (a full in-app notification system with the [Noticed](https://github.com/excid3/noticed) gem), [Human Essentials](https://github.com/rubyforgood/human-essentials) (Ruby for Good), the [rails/website](https://github.com/rails/website) documentation, and more. Outside of work, I enjoy side projects, reading, and tinkering with new technologies. I also write about the topics that excite me on this site, mostly Ruby and Rails posts, with a few opinions about developer life.
+I regularly contribute to open source. Merged work includes a full in-app notification system for [Moneygun](https://github.com/yshmarov/moneygun), contributions to [Human Essentials](https://github.com/rubyforgood/human-essentials) (Ruby for Good), and documentation updates for the [rails/website](https://github.com/rails/website). I write about Ruby, Rails, and developer life on this site — my digital garden for planting ideas, publishing tutorials, and showcasing projects.
 
-This website is my digital garden: a place to plant ideas, publish tutorials, and showcase my projects. Thanks for visiting!
+If anything here resonates, I'd love to hear from you.
