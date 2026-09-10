@@ -4,25 +4,25 @@ title: Recommendations
 permalink: /recommendations/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}?v={{ site.time | date: '%s' }}">
-
-<div class="recommendations-grid">
+<div class="rec-plates">
 {% for rec in site.data.recommendations %}
-  <div class="recommendation-card">
-    <div class="recommendation-text-wrapper">
-      <blockquote class="recommendation-text expandable-text">"{{ rec.text | newline_to_br }}"</blockquote>
-      <button class="read-more-btn" onclick="toggleExpand(this)" style="display: none;">Read more</button>
-    </div>
-    <div class="recommendation-author">
+  <article class="rec-plate">
+    <blockquote class="rec-text expandable-text">{{ rec.text | newline_to_br }}</blockquote>
+    <button class="read-more-btn" onclick="toggleExpand(this)" style="display: none;">Read more</button>
+
+    <div class="rec-author">
       {% if rec.image_url %}
-        <img src="{{ rec.image_url }}" alt="{{ rec.name }}" class="recommendation-photo">
+        <img src="{{ rec.image_url }}" alt="{{ rec.name }}" class="rec-photo" loading="lazy">
       {% endif %}
-      <div class="recommendation-author-info">
-        <h3 class="recommendation-name"><a href="{{ rec.profile_url }}" target="_blank">{{ rec.name }}</a></h3>
-        <p class="recommendation-headline">{{ rec.headline }}</p>
+      <div class="rec-author-info">
+        <h2 class="rec-name"><a href="{{ rec.profile_url }}" target="_blank" rel="noopener">{{ rec.name }}</a></h2>
+        <p class="rec-headline">{{ rec.headline }}</p>
+        {% if rec.relationship %}
+        <p class="rec-meta">{{ rec.relationship }}</p>
+        {% endif %}
       </div>
     </div>
-  </div>
+  </article>
 {% endfor %}
 </div>
 

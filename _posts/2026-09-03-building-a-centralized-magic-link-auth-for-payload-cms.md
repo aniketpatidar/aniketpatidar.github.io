@@ -5,8 +5,6 @@ permalink: /building-a-centralized-magic-link-auth-for-payload-cms/
 image: /images/payload-cms-auth.png
 ---
 
-![Payload CMS Magic Link Auth](/images/payload-cms-auth.png)
-
 Recently, I decided to migrate my personal website, aniketpatidar.com, from GitHub Pages to Payload CMS (hosted at cms.aniketpatidar.com). 
 
 Having previously worked with Sanity CMS, Payload felt immediately familiar. Setting up pages, layouts, and components was a breeze. For the infrastructure, I went all-in on the Cloudflare ecosystem, utilizing R2 for storage and D1 for my database needs. 
@@ -15,14 +13,14 @@ The setup was incredibly straightforward, with only one minor gotcha: I hit the 
 
 But once the site was up, I realized I had a different problem to solve: **Authentication.**
 
-#### The Problem with Personal Website CMS Auth
+## The Problem with Personal Website CMS Auth
 
 When it comes to personal websites, the traditional CMS experience feels a bit too heavy. Website owners shouldn't have to remember a specific Payload password or navigate to a completely separate CMS login screen just to fix a typo or publish a quick update.
 
 The ideal workflow should be entirely frictionless:
 **Open the website → Log in → Edit content → Save.**
 
-#### Building an "Invisible" Authentication Flow
+## Building an "Invisible" Authentication Flow
 
 To achieve this, I decided to build a reusable authentication flow based on magic links. Instead of building this directly into the website's codebase, I centralized it using a Cloudflare Worker. This means I can reuse the exact same authentication service across multiple personal websites in the future, rather than rebuilding it from scratch every time.
 
@@ -38,7 +36,9 @@ Here is exactly how the flow works:
 8. **Storage:** The session is securely stored in an HTTP-only cookie.
 9. **Access Granted:** Payload CMS validates the session from the cookie and grants access to the dashboard.
 
-#### The End Goal
+![Payload CMS Magic Link Auth](/images/payload-cms-auth.png)
+
+## The End Goal
 
 The goal of this project wasn't to build another complicated authentication system. It was the exact opposite: to make the CMS experience feel completely invisible for people who just want to manage their personal websites without the overhead.
 

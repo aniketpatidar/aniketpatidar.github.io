@@ -11,13 +11,13 @@ It became clear that the theme wasn’t available in the Open VSX registry, whic
 
 This left me with only one option: to install it manually.
 
-### Getting the VSIX File
+## Getting the VSIX File
 
 Since the extension wasn't available in Open VSX, I obtained the .vsix package directly from VS Code. Once you have the VSIX file, Antigravity can easily install it locally. In my case, the file was:
 
 `hiteshchoudharycode.chai-theme-0.2.0-web.vsix`
 
-### Installing the Extension Manually
+## Installing the Extension Manually
 
 Antigravity supports the same local extension installation process as VS Code. All you need is this command:
 
@@ -34,7 +34,7 @@ Extension 'hiteshchoudharycode.chai-theme-0.2.0-web.vsix' was successfully insta
 
 Theme applied.
 
-### Final Notes
+## Final Notes
 
 If an extension isn’t available in Open VSX, you can always:
 

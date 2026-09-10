@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/contributions.css' | relative_url }}">
+
+<nav class="breadcrumb">
+  <a href="/contributions/">Contributions</a> /
+  {%- if page.github %}
+  <a href="{{ page.github }}" target="_blank" rel="noopener">{{ page.org | join: " · " }}</a>
+  {%- elsif page.repo %}
+  {%- for repo in page.repo %}
+  {%- unless forloop.first %} · {% endunless %}
+  <a href="{{ repo }}" target="_blank" rel="noopener">{{ page.org[forloop.index0] }}</a>
+  {%- endfor %}
+  {%- endif %}
+</nav>
+
+<article class="post contrib-record">
+
+  <header class="contrib-record-head">
+
+    <h1 class="post-title contrib-record-title">{{ page.title | escape }}</h1>
+
+  </header>
+
+  <div class="post-content contrib-record-body">
+    {{ content }}
+  </div>
+
+  <p class="contrib-record-back">
+    <a href="/contributions/">← Back to all contributions</a>
+  </p>
+
+</article>

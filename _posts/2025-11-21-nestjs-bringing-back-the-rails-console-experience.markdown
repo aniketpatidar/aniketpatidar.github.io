@@ -34,7 +34,7 @@ Now, you can perform similar tasks as you would in a Rails console:
 
 While it doesn't load the full Rails environment, it serves its purpose.
 
-### And yes, Prisma Studio exists
+## And yes, Prisma Studio exists
 
 Before diving into building a custom REPL, consider that Prisma comes with **Prisma Studio**:
 
@@ -44,7 +44,7 @@ npx prisma studio
 
 Prisma Studio provides a clean interface for viewing and editing tables. It's excellent for browsing data but doesn't quite capture the "let me try this query right now" feel of the Rails console. This is where the REPL comes in handy.
 
-### When the REPL is the Right Choice
+## When the REPL is the Right Choice
 
 * Testing a query before integrating it into a service
     
