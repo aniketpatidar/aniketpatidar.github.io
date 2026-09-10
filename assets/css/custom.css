@@ -243,6 +243,10 @@ main.page-content .wrapper {
   color: var(--pl-ink-body);
 }
 
+.hero-mobile-row {
+  display: none;
+}
+
 .hero-foot {
   display: flex;
   align-items: flex-start;
@@ -331,10 +335,6 @@ main.page-content .wrapper {
   transform: translateY(1px);
 }
 
-.hero-lede-photo {
-  display: none;
-}
-
 @media (max-width: 600px) {
   .hero {
     position: relative;
@@ -351,7 +351,7 @@ main.page-content .wrapper {
   .desktop-hero-photo {
     display: none;
   }
-  .hero-lede-photo {
+  .hero-mobile-row {
     display: flex;
     align-items: center;
     gap: 1rem;
