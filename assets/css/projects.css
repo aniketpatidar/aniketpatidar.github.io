@@ -37,6 +37,9 @@
 .project-plate:last-child {
   border-bottom: 1px solid var(--pl-ink-strong);
 }
+.project-plate--no-figure {
+  grid-template-columns: minmax(0, 1fr);
+}
 .project-plate::before {
   content: "";
   position: absolute;
@@ -69,7 +72,6 @@
   color: var(--pl-ink-body);
   font-size: 0.95rem;
   line-height: 1.6;
-  max-width: 60ch;
 }
 
 .project-plate-meta {

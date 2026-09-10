@@ -464,7 +464,6 @@ blockquote {
   font-family: var(--pl-serif);
   font-size: 1.125rem;
   line-height: 1.6;
-  max-width: 62ch;
 }
 .rec-text::before {
   content: "\201C";

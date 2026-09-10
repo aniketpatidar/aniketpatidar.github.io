@@ -2,7 +2,7 @@
 
 <section class="projects-index" aria-label="Selected projects">
   {% for project in site.projects %}
-    <article class="project-plate">
+    <article class="project-plate{% unless project.images.size > 0 or project.github %} project-plate--no-figure{% endunless %}">
       <div class="project-plate-main">
         <h2 class="project-plate-title">
           <a href="{{ project.url }}">{{ project.title }}</a>
