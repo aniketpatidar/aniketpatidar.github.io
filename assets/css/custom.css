@@ -145,6 +145,7 @@ main.page-content .wrapper {
   }
   .site-nav {
     position: relative;
+    z-index: 10;
     float: none;
     display: flex;
     flex: 1;
@@ -176,6 +177,7 @@ main.page-content .wrapper {
   .nav-items {
     display: none;
     position: absolute;
+    z-index: 20;
     top: calc(100% + 0.5rem);
     right: 0;
     flex-direction: column;
