@@ -331,7 +331,14 @@ main.page-content .wrapper {
   transform: translateY(1px);
 }
 
+.hero-lede-photo {
+  display: none;
+}
+
 @media (max-width: 600px) {
+  .hero {
+    position: relative;
+  }
   .hero-title {
     font-size: clamp(2.5rem, 13vw, 3.5rem);
   }
@@ -340,9 +347,36 @@ main.page-content .wrapper {
     align-items: flex-start;
     gap: 0.35rem;
   }
+  .desktop-hero-lede,
+  .desktop-hero-photo {
+    display: none;
+  }
+  .hero-lede-photo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .mobile-hero-lede {
+    flex: 1 1 auto;
+    max-width: none;
+    margin: 0;
+    font-size: 1rem;
+  }
+  .mobile-hero-photo {
+    flex: 0 0 auto;
+    margin: 0;
+  }
+  .hero-foot {
+    margin-top: 1.5rem;
+  }
+  .hero-main {
+    flex: 1 1 0;
+    min-width: 0;
+  }
   .hero-photo {
-    width: 176px;
-    height: 176px;
+    width: 150px;
+    height: 150px;
   }
 }
 

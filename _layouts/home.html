@@ -13,7 +13,21 @@ layout: default
       {%- endif -%}
     </div>
     {%- if page.hero_lede -%}
-    <p class="hero-lede">{{ page.hero_lede }}</p>
+    <p class="hero-lede desktop-hero-lede">{{ page.hero_lede }}</p>
+    {%- endif -%}
+
+    {%- if page.hero_lede or page.hero_photo -%}
+    <div class="hero-lede-photo mobile-hero-row">
+      {%- if page.hero_lede -%}
+      <p class="hero-lede mobile-hero-lede">{{ page.hero_lede }}</p>
+      {%- endif -%}
+
+      {%- if page.hero_photo -%}
+      <figure class="hero-photo-figure mobile-hero-photo">
+        <img class="hero-photo" src="{{ page.hero_photo | relative_url }}" alt="{{ page.hero_photo_alt | default: "Portrait of Aniket Patidar" }}" width="232" height="232">
+      </figure>
+      {%- endif -%}
+    </div>
     {%- endif -%}
 
     <div class="hero-foot">
@@ -34,7 +48,7 @@ layout: default
         {%- endif -%}
       </div>
       {%- if page.hero_photo -%}
-      <figure class="hero-photo-figure">
+      <figure class="hero-photo-figure desktop-hero-photo">
         <img class="hero-photo" src="{{ page.hero_photo | relative_url }}" alt="{{ page.hero_photo_alt | default: "Portrait of Aniket Patidar" }}" width="232" height="232">
       </figure>
       {%- endif -%}
