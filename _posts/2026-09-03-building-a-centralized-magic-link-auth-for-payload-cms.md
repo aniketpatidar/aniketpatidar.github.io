@@ -1,19 +1,21 @@
 ---
 layout: post
 title: "Building a Centralized Magic Link Auth for Payload CMS"
+description: "Replacing the Payload CMS password login on my personal site with a centralized magic-link flow, running on Cloudflare Workers, R2, and D1."
 permalink: /building-a-centralized-magic-link-auth-for-payload-cms/
 image: /images/payload-cms-auth.png
+featured: true
 ---
 
 Recently, I decided to migrate my personal website, aniketpatidar.com, from GitHub Pages to Payload CMS (hosted at cms.aniketpatidar.com). 
 
-Having previously worked with Sanity CMS, Payload felt immediately familiar. Setting up pages, layouts, and components was a breeze. For the infrastructure, I went all-in on the Cloudflare ecosystem, utilizing R2 for storage and D1 for my database needs. 
+Having previously worked with Sanity CMS, Payload felt immediately familiar. Setting up pages, layouts, and components went quickly. For the infrastructure, I went all-in on the Cloudflare ecosystem, using R2 for storage and D1 for the database. 
 
-The setup was incredibly straightforward, with only one minor gotcha: I hit the Cloudflare Workers 3 MB script size limit on the free tier. When you are bundling complex integrations or CMS dependencies into a single Worker script, that compressed size limit sneaks up on you quickly. A quick upgrade to the Workers Paid plan (which bumps the limit to 10 MB) resolved the deployment issues, and the site was live.
+The setup was straightforward, with one gotcha: I hit the Cloudflare Workers 3 MB script size limit on the free tier. When you are bundling complex integrations or CMS dependencies into a single Worker script, that compressed size limit sneaks up on you quickly. A quick upgrade to the Workers Paid plan (which bumps the limit to 10 MB) resolved the deployment issues, and the site was live.
 
 But once the site was up, I realized I had a different problem to solve: **Authentication.**
 
-## The Problem with Personal Website CMS Auth
+## A personal site shouldn’t need a CMS password
 
 When it comes to personal websites, the traditional CMS experience feels a bit too heavy. Website owners shouldn't have to remember a specific Payload password or navigate to a completely separate CMS login screen just to fix a typo or publish a quick update.
 
@@ -42,4 +44,4 @@ Here is exactly how the flow works:
 
 The goal of this project wasn't to build another complicated authentication system. It was the exact opposite: to make the CMS experience feel completely invisible for people who just want to manage their personal websites without the overhead.
 
-If you are interested in seeing how it all comes together under the hood, I've made the source code available here: [github.com/aniketpatidar/personalwebsite](https://github.com/aniketpatidar/personalwebsite)
+The source code is on GitHub: [github.com/aniketpatidar/personalwebsite](https://github.com/aniketpatidar/personalwebsite)

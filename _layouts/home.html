@@ -64,7 +64,10 @@ layout: default
   {%- if site.posts.size > 0 -%}
   <h2 class="post-list-heading">{{ page.list_heading | default: "Latest writing" }}</h2>
   <ul class="post-list">
-    {%- for post in site.posts -%}
+    {%- assign listed_posts = site.posts -%}
+    {%- if page.featured_writing -%}{%- assign listed_posts = site.posts | where: "featured", true -%}{%- endif -%}
+    {%- if page.post_limit -%}{%- assign listed_posts = listed_posts | slice: 0, page.post_limit -%}{%- endif -%}
+    {%- for post in listed_posts -%}
     <li>
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       <span class="post-meta">{{ post.date | date: date_format }}</span>
@@ -78,7 +81,7 @@ layout: default
     {%- endfor -%}
   </ul>
   {%- unless page.archive -%}
-  <a class="feed-more" href="{{ '/posts/' | relative_url }}">Browse the full archive →</a>
+  <a class="feed-more" href="{{ '/posts/' | relative_url }}">All {{ site.posts.size }} posts →</a>
   {%- endunless -%}
   {%- endif -%}
 

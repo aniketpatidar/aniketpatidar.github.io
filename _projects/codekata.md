@@ -1,27 +1,48 @@
 ---
 layout: project
+date: '2026-08-14'
 title: CodeKata
 nav_exclude: true
 owner: aniketpatidar
 repo: codekata
 branch: main
 github: https://github.com/aniketpatidar/codekata
-description: A competitive coding platform for Ruby developers. Solve challenges,
-  compete in multi-round games against friends, collaborate in real-time, and discuss
-  solutions in the community forum.
+description: Head-to-head Ruby coding games built with Rails. Two players race through
+  rounds while Action Cable keeps their editors in sync, and Judge0 runs each submission
+  in a sandbox.
 badges:
 - name: Rails
 - name: Hotwire
+- name: Action Cable
 - name: PostgreSQL
+- name: Judge0
 images: []
+order: 1
+role: Personal project, built solo
 ---
+
+## How it works
+
+A challenger picks 1, 3, or 5 rounds and a difficulty. Each round gets a random challenge, and whoever passes every test first wins it. Three Action Cable channels keep the shared editor, the game state, and the list of who's online up to date.
+
+Submissions go through `CodeEvaluation` to [Judge0](https://judge0.com/), which runs them in a sandbox and checks the output against the challenge's tests. The executor is injected, so the test suite swaps Judge0 out. When a game ends, a `GameScorer` service works out each player's score change. Winners earn more for beating higher-scored opponents, and losers keep the rounds they won.
+
+The domain vocabulary (Challenge, Game, Round, Mock) is written down in the repo's `CONTEXT.md`, so the code and the conversations use the same words. CI runs the tests, RuboCop, and Brakeman on every pull request.
+
+## Next on the list
+
+- Move code evaluation into a background job and use Judge0's batch submissions, so a request doesn't wait on the sandbox.
+- Upgrade the app from Rails 7.1 to Rails 8.
+
+## Repository README
 
 <!-- README_START -->
 
-<h1 id="codekata">CodeKata</h1>
 
-<blockquote>
-  <p>[!NOTE]<br>
+
+<blockquote class="readme-alert readme-alert-note">
+<p class="readme-alert-title">Note</p>
+  <p>
 CodeKata is a coding platform for Ruby developers.</p>
 </blockquote>
 
@@ -39,8 +60,9 @@ CodeKata is a coding platform for Ruby developers.</p>
 
 <p>Follow these steps to install CodeKata.</p>
 
-<blockquote>
-  <p>[!IMPORTANT]<br>
+<blockquote class="readme-alert readme-alert-important">
+<p class="readme-alert-title">Important</p>
+  <p>
 You must install Ruby 3.2.2, PostgreSQL, Redis, and Node.js first.</p>
 </blockquote>
 
@@ -70,6 +92,15 @@ You must install Ruby 3.2.2, PostgreSQL, Redis, and Node.js first.</p>
 </code></pre></div></div>
 <p>Then, open <code>http://localhost:3000</code> in your web browser.</p>
 
+<h3 id="docker-alternative">Docker (alternative)</h3>
+
+<p><code>docker-compose.yml</code> runs the app, Postgres, and Redis as containers:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose up <span class="nt">-d</span>
+</code></pre></div></div>
+
+<p>Postgres and Redis publish to <code>localhost:5432</code> and <code>localhost:6379</code>, so commands run on the host (<code>bin/rails test</code>, <code>bin/rails console</code>, etc.) can point <code>DATABASE_URL</code>/<code>REDIS_URL</code> at <code>localhost</code> rather than a container IP — container IPs are assigned dynamically and change on every restart.</p>
+
 <h2 id="configuration-options">Configuration Options</h2>
 
 <p>CodeKata uses environment variables for settings. You can find these in the <code>.env</code> file. Common options include:</p>
@@ -80,8 +111,9 @@ You must install Ruby 3.2.2, PostgreSQL, Redis, and Node.js first.</p>
   <li>Judge0 API keys to run code.</li>
 </ul>
 
-<blockquote>
-  <p>[!TIP]<br>
+<blockquote class="readme-alert readme-alert-tip">
+<p class="readme-alert-title">Tip</p>
+  <p>
 Look at the <code>.env.example</code> file. It shows all the settings you can use.</p>
 </blockquote>
 
@@ -102,8 +134,9 @@ Look at the <code>.env.example</code> file. It shows all the settings you can us
 
 <p>We want your help! Please read <code>CONTRIBUTING.md</code> to learn how to add code.</p>
 
-<blockquote>
-  <p>[!WARNING]<br>
+<blockquote class="readme-alert readme-alert-warning">
+<p class="readme-alert-title">Warning</p>
+  <p>
 You must run the tests before you share your changes. Also, you must run Redis on your computer so the tests can pass.</p>
 </blockquote>
 

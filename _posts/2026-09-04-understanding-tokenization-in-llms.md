@@ -3,6 +3,7 @@ layout: post
 title: "Understanding Tokenization in LLMs"
 date: 2026-09-04 13:30:00 +0530
 categories: ai machine-learning
+description: "What tokenization is, and the four steps LLMs use to turn raw text into the token IDs a model actually sees."
 ---
 
 Tokenization is the process of breaking down text into smaller units called tokens so a computer can process it more easily. In natural language processing, tokens are usually words, subwords, or even characters, depending on the tokenizer rules.

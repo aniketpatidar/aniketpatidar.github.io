@@ -1,24 +1,26 @@
 ---
 layout: post
 title: "How I contributed notifications to an open-source product"
-seoTitle: "How I contributed notifications to an open-source product"
-seoDescription: "This post details my contribution to the notification system for Moneygun, an open-source, white-label SaaS boilerplate."
-datePublished: Sun Jul 06 2025 13:49:06 GMT+0000 (Coordinated Universal Time)
-cuid: cmcrqajfi000102jt40lf5m11
+description: "How I built Moneygun's notification system with the Noticed gem, from installing the gem to sending the first email."
 permalink: /how-i-contributed-notifications-to-an-open-source-product/
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1751805807419/b8608399-9201-4f66-ab43-a433def52426.jpeg
+image: https://cdn.hashnode.com/res/hashnode/image/upload/v1751805807419/b8608399-9201-4f66-ab43-a433def52426.jpeg
 tags: opensource, ruby-on-rails, notifications
 
+featured: true
 ---
 
-This post details my contribution to the notification system for Moneygun, an open-source, white-label SaaS boilerplate. It provides a practical and actionable guide on integrating notifications into a Rails application using the [Noticed](https://github.com/excid3/noticed) gem.
+In June 2025 I added a notification system to Moneygun, an open-source, white-label SaaS boilerplate for Rails, using the [Noticed](https://github.com/excid3/noticed) gem. It was merged as [PR #286](https://github.com/yshmarov/moneygun/pull/286). This post walks through the setup, from installing the gem to sending the first email.
+
+*Versions at the time: Rails 8.0.2, Ruby 3.4.1, Noticed 2.7.0, Solid Queue 1.1.5, Solid Cable 3.0.8.*
 
 [https://github.com/yshmarov/moneygun/pull/286](https://github.com/yshmarov/moneygun/pull/286)  
+## How I found the issue
+
 First, I want to share that I learned about [Yaroslav Shmarov](https://x.com/yarotheslav) (@yarotheslav) looking for contributors for their open-source product, Moneygun, through a Twitter post he made. I also wanted to explore the new version of the Noticed gem, so I decided to give it a try. That's how I got the opportunity to work on this [issue](https://github.com/yshmarov/moneygun/issues/285).
 
 Do check out Moneygun if you want to build your next B2B SaaS app (software as a service): [https://github.com/yshmarov/moneygun](https://github.com/yshmarov/moneygun)
 
-[![](https://cdn.hashnode.com/res/hashnode/image/upload/v1751806188505/251884e9-cc45-4543-a204-0a066a36b808.png align="center")](https://x.com/yarotheslav/status/1934196524633706540)
+[![Yaroslav Shmarov's post on X inviting contributors to Moneygun](https://cdn.hashnode.com/res/hashnode/image/upload/v1751806188505/251884e9-cc45-4543-a204-0a066a36b808.png)](https://x.com/yarotheslav/status/1934196524633706540)
 
 There are two things that need to be implemented. 
 
@@ -26,6 +28,8 @@ There are two things that need to be implemented.
     
 * Email
     
+
+## Installing Noticed
 
 First, I explored the gem to understand how to implement basic boilerplate code for notifications, then began by adding the gem to the Rails application:
 
@@ -44,10 +48,12 @@ bundle add "noticed"
 
 Generate and then run the migrations:
 
-```ruby
+```bash
 rails noticed:install:migrations
 rails db:migrate
 ```
+
+## Creating the notifiers
 
 To start, create a Notifier:
 
@@ -63,9 +69,9 @@ rails generate noticed:notifier MembershipInvitationNotifier
 rails generate noticed:notifier MembershipRequestAcceptedNotifier
 ```
 
-In this post, we'll deliver notifications by email, and in the next post, we'll cover turbo\_stream, which provides real-time UI updates to users' browsers.
+This post covers email delivery.
 
-First, let's take a look at how the generated notifier appears.
+Here's what the generator created.
 
 Three files are created under the notifiers:
 
@@ -129,11 +135,13 @@ class MembershipInvitationNotifier < ApplicationNotifier
 end
 ```
 
-In the boilerplate code, you can see there's⁣`deliver_by: email`, so we will implement the mailer delivery method first.
+## Delivering by email
 
-We won't complicate things for now; we'll start with one notifier to give you an idea, and then you can implement another notifier on your own.
+In the boilerplate code, you can see there's `deliver_by :email`, so I implemented the mailer delivery method first.
 
-So we need to notify the user when he is invited to an organization. First, clean up the commented lines and keep only the ones that are needed.
+I'll walk through one notifier here. The other two follow the same pattern.
+
+The first one notifies a user when they're invited to an organization. First, clean up the commented lines and keep only the ones that are needed.
 
 ```ruby
 class MembershipInvitationNotifier < ApplicationNotifier
@@ -150,7 +158,7 @@ class MembershipInvitationNotifier < ApplicationNotifier
 end
 ```
 
-Notifiers can use different helper methods. Inside a notification\_methods block, we also set up the message and URL helpers.
+Notifiers can use different helper methods. Inside a notification\_methods block, I also set up the message and URL helpers.
 
 ```ruby
 notification_methods do
@@ -188,7 +196,7 @@ en:
        message: You've been invited to join %{organization_name}
 ```
 
-Notifiers can choose required parameters using the `required_params`method. We need to declare `:organization` as a required parameter to ensure `params[:organization]` is available in our notifier:
+Notifiers can choose required parameters using the `required_params` method. I declared `:organization` as a required parameter, so `params[:organization]` is always available in the notifier:
 
 ```ruby
  required_params :organization
@@ -229,7 +237,7 @@ Membership#invitation_email
 <%= @greeting %>, find me in app/views/membership_mailer/invitation_email.text.erb
 ```
 
-Instead of using this default greeting, we want to send our message and include the action\_url. To do this, we need to have the notification object available, so we should pass it from our notifier like this:
+Instead of this default greeting, I wanted to send the notification's message and include the action\_url. To do this, we need to have the notification object available, so we should pass it from our notifier like this:
 
 ```ruby
 deliver_by :email do |config|
@@ -239,7 +247,7 @@ deliver_by :email do |config|
 end
 ```
 
-Now we need to make a small change to our mailer method.
+That needs a small change to the mailer method.
 
 ```ruby
 # app/mailers/membership_mailer.rb
@@ -260,7 +268,7 @@ class MembershipMailer < ApplicationMailer
 end
 ```
 
-```ruby
+```erb
 # app/views/membership_mailer/invitation_email.text.erb
 <%= @message %>
 
@@ -296,7 +304,9 @@ class MembershipInvitationNotifier < ApplicationNotifier
 end
 ```
 
-Our notifier setup is now complete. Next, we need to trigger this notifier:
+## Triggering the notification
+
+That completes the notifier. Next, we need to trigger this notifier:
 
 ```ruby
 # app/models/membership.rb
@@ -311,4 +321,6 @@ class Membership < ApplicationRecord
 end
 ```
 
-With this setup in place, we have everything necessary to notify a user when they are invited to join an organization. Thank you for taking the time to read.
+With this setup in place, a user gets an email when they're invited to join an organization.
+
+The PR also covers the other two notifiers and live in-app updates through a custom Turbo Stream delivery method. Getting those live updates working in development took the longest: the cause was Action Cable's `async` adapter, not my code. I wrote up that part, and the full list of what the PR changed, on [the contribution page](/contributions/full-in-app-notification-system-using-the-noticed-gem/).

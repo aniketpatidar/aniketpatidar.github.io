@@ -7,72 +7,81 @@ permalink: /resume/
 **Aniket Patidar**  
 +91 6263803768 \| aniketpatidar01@gmail.com \| [linkedin.com/in/aniketpatidar](https://linkedin.com/in/aniketpatidar) \| [github.com/aniketpatidar](https://github.com/aniketpatidar) \| [aniketpatidar.com](https://aniketpatidar.com)
 
-## SUMMARY
-Software engineer with 4 years of experience building web applications with Ruby on Rails, React, and Next. Experienced in backend systems, API integrations, open banking, and production Rails upgrades. I enjoy working with Ruby and Rails and have contributed to well-known open-source projects.
+## Summary
+Software engineer with four years at CodeNote IT Solutions, building Rails backends for fintech clients. Led a zero-downtime upgrade of a credit-decisioning API from Rails 6.1 to 8.0.1 and integrated open banking providers. Open-source contributor to Moneygun and Ruby for Good's Human Essentials.
 
-## EDUCATION
-* **LNCT, Indore** - B.Tech in Computer Science \| Aug 2020 – Jun 2024
-* **School For Excellence, Khargone, MP** – Secondary Level (PCM) \| Jul 2018 – Mar 2019
+## Experience
+*The full year-by-year account is on the [career page](/career/).*
 
-## EXPERIENCE
-**Software Engineer** \| March 2025 – Present · [CodeNote IT Solutions, Indore](https://www.codenote-it.com/)
-* Led production Rails upgrade from 6.1 to 8.0.1 for [Kreditz's](https://kreditz.com/) external API, ensuring zero-downtime migration.
+**Software Engineer** \| Mar 2025 – Present · [CodeNote IT Solutions, Indore](https://www.codenote-it.com/)
+* Led production Rails upgrade from 6.1 to 8.0.1 for [Kreditz's](https://kreditz.com/) external API, with zero downtime.
 * Built custom lending flows and credit scoring pipelines by processing user bank transaction data.
 * Integrated financial dashboards consuming Fortnox and Visma APIs for real-time accounting data.
-* Built [MyWearToday](http://myweartoday.com), an AI-powered digital closet with virtual try-on and RAG-based outfit recommendations.
-* Migrated [TeamDriveaway](https://teamdriveaway.com/) from a legacy CMS to Astro and Sanity, including content schemas and GROQ queries.
+* Built [MyWearToday](https://myweartoday.com), an AI-powered digital closet: Inngest jobs for clothing classification, outfit suggestions, and virtual try-on (Gemini API, Vertex AI), retrieval on PostgreSQL full-text search, and Razorpay credit billing.
+* Built [Printrizz](https://aniketpatidar.com/projects/printrizz/), a print-on-demand marketplace on NestJS, Prisma, and Next.js: a product-variant data model, per-placement design previews, Razorpay checkout, Delhivery shipping behind a courier interface, and influencer referral commissions.
+* Migrated [TeamDriveAway](https://teamdriveaway.com/) from a legacy CMS to Astro and Sanity, including content schemas and GROQ queries.
+* Fixed security issues: timing-safe token checks on internal API endpoints, YAML.safe_load for untrusted input, an unauthenticated broadcast endpoint locked down, and a Twilio upgrade to unblock a patched JWT library.
 
-**Associate Software Engineer** \| Mar 2023 – Feb 2025 · [Codenote IT Solutions, Indore](https://www.codenote-it.com/)
-* Integrated [Yapily](https://www.yapily.com/) alongside Klarna to ensure uninterrupted access to banking data during third-party outages.
+**Associate Software Engineer** \| Mar 2023 – Feb 2025 · [CodeNote IT Solutions, Indore](https://www.codenote-it.com/)
+* Integrated [Yapily](https://www.yapily.com/) alongside Klarna so the platform keeps access to bank data during third-party outages.
 * Integrated OAuth 2.0 for secure client authentication and webhook data delivery.
-* Implemented PDF certificate generation using Wicked PDF.
+* Implemented PDF certificate generation using Wicked PDF, and later stopped report timeouts by generating from stored data.
+* Sped up a slow admin login by optimizing the dashboard behind it: concurrent index creation, tighter scopes, and fewer count queries.
+* Fixed Action Cable socket drops on Safari iOS 17.5 that stopped live bank-connection updates, and removed personal data from flow URLs.
+* Built the charts and tables for a corporate financial report that renders identically in the browser and in Wicked PDF.
 
 **Software Engineer Intern** \| Sep 2022 – Feb 2023 · [CodeNote IT Solutions, Indore](https://www.codenote-it.com/)
 * Implemented two-factor authentication using ActiveModel::Otp in a Rails application.
 * Integrated International Telephone Input plugin for international phone number validation.
 
-## TECHNICAL SKILLS
+## Technical skills
 * **Languages:** Ruby, JavaScript, TypeScript, SQL
-* **Frameworks:** Ruby on Rails, React, Next.js, Hotwire, Astro
+* **Frameworks:** Ruby on Rails, React, Next.js, NestJS, Prisma, Hotwire, Astro
 * **Databases:** PostgreSQL, MySQL, Redis, pgvector
 * **AI:** RAG, Embeddings, Vector Search, Gemini API
 * **Infrastructure & Backend:** Docker, AWS, REST APIs, Webhooks, CI/CD, Sidekiq, Inngest
 * **Frontend & CMS:** Tailwind CSS, Radix UI, Sanity CMS
 * **Developer Tools:** Git, GitHub, Claude Code, Opencode, Codex
 
-## PROJECTS
-**[CodeKata](https://github.com/aniketpatidar/rubyBattle)** \| Ruby on Rails, Hotwire, PostgreSQL \| Apr 2024 – Present.
-* Built a real-time Ruby coding platform with live code execution and output rendering.
-* Implemented shareable rooms for collaborative coding sessions.
-* Added challenges and a Q&A system with voting.
+## Projects
+**[CodeKata](https://github.com/aniketpatidar/codekata)** \| Ruby on Rails, Hotwire, PostgreSQL \| Apr 2024 – Present
+* Built head-to-head Ruby coding games: players race through rounds with live code sync and presence over Action Cable.
+* Ran submissions in a Judge0 sandbox behind an injectable executor, so tests run without the external service.
+* Added challenges, timed solo mocks, and a discussion forum with voting; CI runs tests, RuboCop, and Brakeman on every pull request.
 
 **[AI Thumbnail Generator](https://github.com/aniketpatidar/ai-thumbnail-generator)** \| React, TypeScript, Gemini Nano Banana \| Aug 2025 – Present
-* Built an AI-powered thumbnail generator that creates contextual designs from uploaded images and prompts.
-* Added support for 16:9 and 9:16 formats for YouTube and short-form content.
+* Built a thumbnail generator that turns a photo and a prompt into YouTube thumbnails in 16:9 and 9:16.
+* Designed it so users bring their own Gemini API key: the key stays in the browser and a Vercel function uses it per request without storing it.
 
-## OPEN SOURCE CONTRIBUTIONS
+## Open source contributions
 **Ruby for Good: Human Essentials**
-* [PR #4215](https://github.com/rubyforgood/human-essentials/pull/4215) - Fixed form field reset issue, ensuring data consistency.
-* [PR #4163](https://github.com/rubyforgood/human-essentials/pull/4163) - Added validation to prevent negative quantities for kit items.
+* [PR #4215](https://github.com/rubyforgood/human-essentials/pull/4215) - Fixed the purchase form resetting the chosen storage location after a failed save.
+* [PR #4163](https://github.com/rubyforgood/human-essentials/pull/4163) - Prevented kits from being saved with negative item quantities; reworked into a Kit-level validation during review.
 
-**Rails: Website**
-* [PR #236](https://github.com/rails/website/pull/236) - Corrected grammatical inconsistencies in the documentation.
+**Rails website**
+* [PR #236](https://github.com/rails/website/pull/236) - Fixed the wording of the Action Dispatch feature heading on the rubyonrails.org homepage.
 
 **Moneygun: White-label SaaS Boilerplate**
-* [PR #286](https://github.com/yshmarov/moneygun/pull/286) - Implemented a full in-app notification system using the Noticed gem, including delivery logic and real-time Turbo Stream updates.
+* [PR #286](https://github.com/yshmarov/moneygun/pull/286) - Built the notification system on the Noticed gem, including email delivery, a custom Turbo Stream delivery method, and tests (45 files).
 
-**Enable Banking: Open Banking EIDAS Broker**
-* [PR #60](https://github.com/enablebanking/open-banking-eidas-broker/pull/60) - Corrected port configuration.
+**Enable Banking: Open Banking eIDAS Broker**
+* [PR #60](https://github.com/enablebanking/open_banking_eidas_broker/pull/60) - Moved TLS from port 80 to 443 in the nginx config and Docker instructions.
 
 **KlinicCon: Healthcare Platform**
-* Open-source healthcare web application; contributed to both [KlinicCon-Frontend](https://github.com/rt4914/KlinicCon-Frontend) and [KlinicCon-Backend](https://github.com/rt4914/KlinicCon-Backend)
+* Added Institute, Specialization, Establishment, and DoctorEstablishment models to the Rails backend ([KlinicCon-Backend](https://github.com/rt4914/KlinicCon-Backend)).
+* Built a shared React Input component with style variants and prop-type validation, plus the contribution guide and PR template ([KlinicCon-Frontend](https://github.com/rt4914/KlinicCon-Frontend)).
 
-## ACHIEVEMENTS
-* Star Performer of 2024
-* Creative Thinker of the Quarter.
+## Education
+* **LNCT, Indore** - B.Tech in Computer Science \| Aug 2020 – Jun 2024
+* **School For Excellence, Khargone, MP** – Secondary Level (PCM) \| Jul 2018 – Mar 2019
 
-## LICENSES & CERTIFICATIONS
+## Achievements
+* Star Performer of 2024, CodeNote IT Solutions
+* Creative Thinker of the Quarter, CodeNote IT Solutions
+
+## Licenses and certifications
 * [Claude 101](https://verify.skilljar.com/c/ciowabotjtfv) - Anthropic Education \| Apr 2026
+* [Claude Code in Action](https://verify.skilljar.com/c/8rujv4pzquzp) - Anthropic Education \| Apr 2026
 * [AI Engineering with Java and Python](https://courses.telusko.com/learn/certificate/8297416-248289) - Telusko
 
 ---

@@ -4,6 +4,8 @@ title: Recommendations
 permalink: /recommendations/
 ---
 
+Recommendations from people I've worked with, at CodeNote and in open source. Each one is from LinkedIn, and the names link to the original profiles.
+
 <div class="rec-plates">
 {% for rec in site.data.recommendations %}
   <article class="rec-plate">

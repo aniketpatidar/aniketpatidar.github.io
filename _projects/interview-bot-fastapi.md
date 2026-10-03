@@ -1,5 +1,6 @@
 ---
 layout: project
+date: '2026-08-14'
 title: Interview Bot
 nav_exclude: true
 owner: aniketpatidar
@@ -11,11 +12,13 @@ badges:
 - name: Python
 - name: FastAPI
 images: []
+order: 98
+listed: false
 ---
 
 <!-- README_START -->
 
-<h1 id="fastapi-audio-transcription-and-chatbot-integration">FastAPI Audio Transcription and Chatbot Integration</h1>
+
 
 <p>FastAPI application for handling audio transcription and integrating with OpenAI’s models for text generation. Users can upload audio files to be transcribed and interact with a chatbot powered by ChatGPT for generating responses. The application also includes functionality to save chat history for maintaining context across conversations.</p>
 

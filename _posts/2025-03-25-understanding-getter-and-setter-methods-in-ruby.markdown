@@ -2,6 +2,7 @@
 layout: post
 title: "Understanding Getter and Setter Methods in Ruby!"
 permalink: /understanding-getter-and-setter-methods-in-ruby/
+description: "What getter and setter methods are in Ruby, and how attr_reader, attr_writer, and attr_accessor create them for you."
 ---
 
 Getter and setter methods in Ruby provide a controlled way to access and modify the values of instance variables from outside the class. This helps maintain data integrity and adheres to the principle of encapsulation, which means hiding the internal state of an object and only exposing necessary parts.

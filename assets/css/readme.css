@@ -1,10 +1,10 @@
 #readme {
   line-height: 1.6;
-  color: #403b33;
+  color: var(--body);
 }
 
-#readme a {
-  color: #0969da;
+#readme a, #readme a:visited {
+  color: var(--foreground);
 }
 
 #readme img {
@@ -13,15 +13,15 @@
 }
 
 #readme pre {
-  background: #efe8db;
-  border: 1px solid #cbc2af;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
   padding: 16px;
   border-radius: 6px;
   overflow-x: auto;
 }
 
 #readme code {
-  background: #efe8db;
+  background: var(--code-bg);
   padding: 0.2em 0.4em;
   border-radius: 3px;
   font-size: 85%;
@@ -40,17 +40,17 @@
 
 #readme table th,
 #readme table td {
-  border: 1px solid #e0d8c8;
+  border: 1px solid var(--border);
   padding: 6px 13px;
 }
 
 #readme table th {
-  background: #efe8db;
+  background: var(--code-bg);
   font-weight: 600;
 }
 
 #readme blockquote {
-  border-left: 4px solid #cbc2af;
+  border-left: 2px solid var(--input);
   padding-left: 1em;
   margin: 1em 0;
 }
@@ -64,18 +64,32 @@
   margin-top: 1.5em;
   margin-bottom: 0.5em;
   font-weight: 500;
-  color: #24211c;
-  font-family: Georgia, "Iowan Old Style", Charter, "Times New Roman", serif;
+  color: var(--foreground);
+  font-family: var(--font-sans);
 }
 
 #readme h1 {
   font-size: 2em;
-  border-bottom: 1px solid #e0d8c8;
+  border-bottom: 1px solid var(--border);
   padding-bottom: 0.3em;
 }
 
 #readme h2 {
   font-size: 1.5em;
-  border-bottom: 1px solid #e0d8c8;
+  border-bottom: 1px solid var(--border);
   padding-bottom: 0.3em;
+}
+#readme blockquote.readme-alert {
+  font-style: normal;
+  border-left: 2px solid var(--muted-foreground);
+}
+#readme blockquote.readme-alert-warning,
+#readme blockquote.readme-alert-caution {
+  border-left-color: var(--highlight);
+}
+#readme .readme-alert-title {
+  margin-bottom: 0.25em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted-foreground);
 }

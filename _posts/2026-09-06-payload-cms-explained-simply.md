@@ -3,6 +3,7 @@ layout: post
 title: "Payload CMS explained simply"
 date: 2026-09-06 14:58:00 +0530
 categories: nextjs cms web-development
+description: "What Payload CMS is, how a headless CMS differs from WordPress, and why Payload 3.0 running inside Next.js matters."
 ---
 
 If you are building a website today, you need a way to manage your content (like blog posts, products, or user profiles). Payload CMS is a tool that helps you do exactly that, but it is built specifically for modern web developers using a tool called Next.js.

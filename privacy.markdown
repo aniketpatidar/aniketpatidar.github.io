@@ -9,11 +9,13 @@ This page explains how aniketpatidar.com handles your data.
 
 ## Information collection
 
-This website is a static site hosted on GitHub Pages. It doesn't natively collect, store, or process your personal information. It doesn't use tracking cookies, aggressive analytics tools, or third-party advertising scripts.
+This website is a static site hosted on GitHub Pages, with requests served through Cloudflare. The site itself doesn't collect, store, or process your personal information. It doesn't use tracking cookies, aggressive analytics tools, or third-party advertising scripts.
 
 ## Third-party services
 
-This site contains links to external websites, such as GitHub, Twitter, and LinkedIn. These sites have their own privacy practices. Review the privacy statements of any external sites you visit.
+GitHub Pages hosts the site, and Cloudflare handles requests on the way to it. Both process technical request data, such as IP addresses, under their own privacy policies.
+
+This site also links to external websites, such as GitHub, X (Twitter), and LinkedIn. These sites have their own privacy practices. Review the privacy statements of any external sites you visit.
 
 ## Analytics
 

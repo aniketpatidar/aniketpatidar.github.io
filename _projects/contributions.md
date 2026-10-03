@@ -1,5 +1,6 @@
 ---
 layout: project
+date: "2026-08-14"
 title: Contributions
 nav_exclude: true
 owner: aniketpatidar
@@ -13,4 +14,7 @@ badges:
   - name: Open Source
 images:
   - /assets/images/contributions/Screenshot from 2025-11-26 23-46-50.png
+order: 99
+listed: false
+published: false
 ---
