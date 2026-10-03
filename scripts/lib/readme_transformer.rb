@@ -41,7 +41,6 @@ module ReadmeTransformer
     doc.to_html
   end
 
-  # The project page already shows the title, so drop the README's own.
   def self.remove_leading_title(doc)
     first = doc.children.find { |node| node.element? }
     first.remove if first&.name == 'h1'
@@ -52,8 +51,6 @@ module ReadmeTransformer
     'WARNING' => 'Warning', 'CAUTION' => 'Caution'
   }.freeze
 
-  # Kramdown renders GitHub's "> [!NOTE]" alerts as plain quotes with the
-  # marker as text. Turn them into labelled callouts.
   def self.convert_alerts(doc)
     doc.css('blockquote').each do |quote|
       paragraph = quote.at_css('p')
