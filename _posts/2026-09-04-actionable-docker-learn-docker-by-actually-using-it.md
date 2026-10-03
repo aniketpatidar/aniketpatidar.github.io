@@ -3,6 +3,7 @@ layout: post
 title: "Actionable Docker: Learn Docker by Actually Using It"
 date: 2026-09-04 18:48:19 +0530
 categories: docker devops
+description: "A hands-on start with Docker: install it, then run real services with it before worrying about the theory."
 ---
 
 Docker can feel complicated when you start with concepts like images, containers, registries, volumes, networks, and Dockerfiles.

@@ -2,6 +2,7 @@
 layout: post
 title: "How to Easily Add VS Code Extensions in Antigravity When Not Available on Open VSX"
 permalink: /how-to-easily-add-vs-code-extensions-in-antigravity-when-not-available-on-open-vsx/
+description: "Antigravity only installs extensions from Open VSX. Here's how to install one that isn't there, using its VSIX file."
 ---
 
 I began with a simple task: installing the Chai theme extension in Antigravity.  
