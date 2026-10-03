@@ -8,6 +8,9 @@ module ReadmeTransformer
     html = Kramdown::Document.new(readme, input: 'GFM').to_html
     
     doc = Nokogiri::HTML::DocumentFragment.parse(html)
+
+    remove_leading_title(doc)
+    convert_alerts(doc)
     
     doc.css('img').each do |img|
       src = img['src']
@@ -36,5 +39,35 @@ module ReadmeTransformer
     end
     
     doc.to_html
+  end
+
+  def self.remove_leading_title(doc)
+    first = doc.children.find { |node| node.element? }
+    first.remove if first&.name == 'h1'
+  end
+
+  ALERT_TITLES = {
+    'NOTE' => 'Note', 'TIP' => 'Tip', 'IMPORTANT' => 'Important',
+    'WARNING' => 'Warning', 'CAUTION' => 'Caution'
+  }.freeze
+
+  def self.convert_alerts(doc)
+    doc.css('blockquote').each do |quote|
+      paragraph = quote.at_css('p')
+      marker = paragraph&.children&.first
+      next unless marker&.text? && (match = marker.content.match(/\A\s*\[!(#{ALERT_TITLES.keys.join('|')})\]\s*/))
+
+      type = match[1]
+      marker.content = marker.content.sub(match[0], '')
+      line_break = paragraph.children.first
+      line_break = line_break.next_sibling if line_break&.text? && line_break.content.strip.empty?
+      line_break.remove if line_break&.name == 'br'
+
+      quote['class'] = "readme-alert readme-alert-#{type.downcase}"
+      title = Nokogiri::XML::Node.new('p', doc.document)
+      title['class'] = 'readme-alert-title'
+      title.content = ALERT_TITLES[type]
+      quote.prepend_child(title)
+    end
   end
 end
