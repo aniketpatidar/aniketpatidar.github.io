@@ -5,20 +5,24 @@ nav_exclude: true
 image: /images/aniket.jpg
 type: website
 show_hero: true
-hero_eyebrow: Software Engineer
+hero_eyebrow: Software engineer
 hero_title: Aniket Patidar
-hero_lede: "I build backend systems that handle real money, real users, and real production incidents - then write about what I learn."
+hero_lede: "I build <span class=\"highlight-phrase\">Rails backends for fintech</span>, including open banking integrations and credit-decisioning work. I've been at CodeNote for four years, starting as an intern."
 hero_photo: /images/aniket.jpg
 hero_photo_alt: Portrait of Aniket Patidar
 hero_proof:
-  - "4+ years shipping Rails in production across fintech and open banking"
-  - "Led a zero-downtime migration from Rails 6.1 → 8.0.1 at [Kreditz](https://kreditz.com), a credit-decisioning platform"
-  - "Built Yapily open banking integrations powering consent flows and transaction data ingestion"
-  - "[contributions.aniketpatidar.com](https://contributions.aniketpatidar.com) — open source contributions"
+  - "Led the zero-downtime upgrade of [Kreditz](https://kreditz.com)'s external API [from Rails 6.1 to 8.0.1](/upgrading-a-fintech-rails-app-from-6-1-to-8/) (client work at CodeNote)"
+  - "Integrated [Yapily](/integrating-yapily-into-a-multi-provider-open-banking-app/) alongside Klarna so the platform keeps access to bank data during third-party outages"
+  - "Built the notification system for [Moneygun](https://github.com/yshmarov/moneygun/pull/286), an open-source Rails boilerplate (45 files, merged with tests)"
+  - "[Recommended](/recommendations/) by CodeNote's CTO and by Moneygun's maintainer"
 hero_ctas:
-  - label: See my work
+  - label: Selected work
     url: /projects/
-  - label: Résumé
+  - label: Open source
+    url: /contributions/
+  - label: Resume
     url: /resume/
-list_heading: Latest writing
+list_heading: Selected writing
+featured_writing: true
+post_limit: 5
 ---

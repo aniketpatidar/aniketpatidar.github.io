@@ -1,15 +1,14 @@
 ---
 layout: post
 title: "Actionable Docker: Learn Docker by Actually Using It"
+description: "A hands-on start with Docker: install it, then run real services with it before worrying about the theory."
 date: 2026-09-04 18:48:19 +0530
 categories: docker devops
 ---
 
-Docker can feel complicated when you start with concepts like images, containers, registries, volumes, networks, and Dockerfiles.
+This is the Docker introduction I'd give a colleague. Most guides start with images, containers, registries, volumes, networks, and Dockerfiles. I'd rather skip most of that for now.
 
-Let's skip most of that for now.
-
-The goal of this guide is simple: get Docker installed, understand what it is actually useful for, and start running real services with it.
+By the end you'll have Docker installed and real services running in it, and you'll know what it's actually useful for.
 
 ## 1. Install Docker.
 
@@ -50,7 +49,7 @@ If `docker` isn't found or the command fails, stop here and fix the installation
 
 ---
 
-## 2. So, what are we using Docker for?
+## 2. What Docker is actually for
 
 This is probably the most important question. Docker lets you run applications and services inside isolated containers. Think of a container as a small, isolated environment running on your machine.
 

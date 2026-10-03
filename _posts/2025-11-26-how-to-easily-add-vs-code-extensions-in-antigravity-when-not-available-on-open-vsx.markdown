@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How to Easily Add VS Code Extensions in Antigravity When Not Available on Open VSX"
+description: "Antigravity only installs extensions from Open VSX. Here's how to install one that isn't there, using its VSIX file."
 permalink: /how-to-easily-add-vs-code-extensions-in-antigravity-when-not-available-on-open-vsx/
 ---
 
@@ -13,7 +14,7 @@ This left me with only one option: to install it manually.
 
 ## Getting the VSIX File
 
-Since the extension wasn't available in Open VSX, I obtained the .vsix package directly from VS Code. Once you have the VSIX file, Antigravity can easily install it locally. In my case, the file was:
+Since the extension wasn't available in Open VSX, I obtained the .vsix package directly from VS Code. Once you have the VSIX file, Antigravity can install it locally. In my case, the file was:
 
 `hiteshchoudharycode.chai-theme-0.2.0-web.vsix`
 

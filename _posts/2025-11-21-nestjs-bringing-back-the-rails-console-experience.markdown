@@ -1,12 +1,14 @@
 ---
 layout: post
 title: "NestJS REPL: Bringing Back the Rails Console Experience"
+description: "Missing the Rails console in NestJS? A small REPL script around the Prisma client gives you a console for exploring and changing data."
 permalink: /bringing-back-the-rails-console-feeling-in-a-nestjs-prisma-world/
+featured: true
 ---
 
-If you've ever worked with Rails, you're likely familiar with the console, a tool that becomes second nature for exploring models, debugging, or modifying data quickly. Transitioning to NestJS, you might miss this handy feature, as it's not available out of the box. However, you can create your own version.
+Moving from Rails to NestJS, I missed the Rails console: a prompt where I can load models, try a query, or fix a record. NestJS has had a built-in REPL since version 9, but it boots the whole application. For poking at data, I wanted something lighter, so I put together a small REPL around the Prisma client.
 
-A straightforward approach is to use Prisma, as its client is self-contained and easily integrated into a REPL. A simple script can get you started:
+Prisma's client is self-contained, so it drops straight into a REPL. Here's the script:
 
 ```ts
 import { PrismaClient } from '@prisma/client';
@@ -49,4 +51,4 @@ Prisma Studio provides a clean interface for viewing and editing tables. It's ex
 * Testing a query before integrating it into a service
     
 
-In summary, a small REPL can be sufficient for quickly testing queries without the need to launch the entire application.
+For trying a query or checking some data, a small REPL is enough. I don't need to boot the whole application.

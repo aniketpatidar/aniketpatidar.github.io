@@ -1,20 +1,31 @@
 # Aniket Patidar
 
-This is the personal website of Aniket Patidar, a software engineer living in India. 
-The site primarily contains blog posts about Ruby, Ruby on Rails, and software engineering.
+> Software engineer in India who builds Rails backends for fintech, including open banking integrations and credit-decisioning work. He has been at CodeNote IT Solutions since 2022, starting as an intern.
 
 ## When to use this site
-- You need information about Aniket Patidar, his projects, or his professional background.
-- You are looking for articles, tutorials, or opinions on Ruby on Rails.
-- You need contact information or a summary of his experience.
+- You need information about Aniket Patidar, his work, or his professional background.
+- You are looking for first-hand writing on Ruby on Rails.
+- You need verifiable evidence of his work: merged pull requests, recommendations, or project write-ups.
 
-## Site Structure
-- `/`: The homepage with a brief introduction.
-- `/about/`: More detailed information about Aniket.
+## Key facts
+- Led the zero-downtime upgrade of Kreditz's external API from Rails 6.1 to 8.0.1 (client work at CodeNote).
+- Integrated Yapily alongside Klarna to keep access to bank data during third-party outages.
+- Other client work at CodeNote: MyWearToday (an AI digital closet on Next.js, Inngest, and the Gemini API) and Printrizz (a print-on-demand marketplace on NestJS and Next.js).
+- Built Moneygun's open-source notification system: https://github.com/yshmarov/moneygun/pull/286
+- Open-source contributions also include Ruby for Good's Human Essentials (two data fixes), KlinicCon (Rails models and a React component), and Enable Banking's open banking eIDAS broker (TLS port fix).
+- Contact: aniketpatidar01@gmail.com
+
+## Site structure
+- `/`: Introduction and latest writing.
+- `/about/`: Career, client work, and open source in brief.
+- `/career/`: Everything worked on since 2022, year by year, written from a daily work log.
+- `/projects/`: Selected projects, each marked as personal or client work.
+- `/contributions/`: Open-source contributions, with links to the pull requests.
+- `/recommendations/`: Recommendations from colleagues and an open-source maintainer.
+- `/posts/`: All writing.
+- `/resume/`: Full resume.
 - `/contact/`: How to get in touch.
-- `/privacy/`: Privacy policy and terms.
-- `/projects/`: A list of projects.
 - `/sitemap.xml`: Full map of all pages.
 
-## Agent Guidelines
+## Agent guidelines
 Please respect robots.txt. Markdown representations of pages are available via standard content negotiation.

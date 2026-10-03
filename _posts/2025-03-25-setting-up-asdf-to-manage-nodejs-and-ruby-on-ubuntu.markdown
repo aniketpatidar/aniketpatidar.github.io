@@ -1,14 +1,15 @@
 ---
 layout: post
 title: "Setting Up asdf to Manage Node.js and Ruby on Ubuntu"
+description: "Install asdf on Ubuntu and use it to manage Node.js and Ruby versions from a single CLI."
 permalink: /setting-up-asdf-to-manage-nodejs-and-ruby-on-ubuntu/
 ---
 
-Managing multiple versions of programming languages can be a headache, but asdf simplifies this process by providing a single CLI tool to manage versions of multiple runtime languages. In this article, we'll walk through the steps to install and configure asdf on Ubuntu, along with Node.js and Ruby.
+I wanted one tool to manage both Node.js and Ruby versions on Ubuntu. [asdf](https://asdf-vm.com/) does that: a single CLI that manages versions of many languages through plugins. These are the steps I followed to install it and set up Node.js and Ruby.
 
 ## Prerequisites
 
-Before we begin, ensure that you have `curl` and `git` installed on your system. You can install them using the following command:
+First, make sure you have `curl` and `git` installed. You can install them using the following command:
 
 ```bash
 sudo apt install curl git
@@ -105,7 +106,3 @@ It's important to verify that asdf has correctly installed and configured the ru
     ```
 
 If you see the correct output, it means that asdf is correctly managing the Ruby version.
-
-## Conclusion
-
-By following these steps, you've installed asdf and configured it to manage Node.js and Ruby on your system. This setup will help you seamlessly switch between different versions of these runtimes, making your development environment more flexible and efficient.
