@@ -1,6 +1,31 @@
-/* ==========================================================================
-   Theme: ChaiUI dark tokens (https://ui.chaicode.com). Dark only.
-   ========================================================================== */
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("../fonts/manrope-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("../fonts/montserrat-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../fonts/onest-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Geist Mono";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("../fonts/geist-mono-latin.woff2") format("woff2");
+}
 
 :root {
   color-scheme: dark;
@@ -12,20 +37,20 @@
 
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
-  --body: oklch(0.87 0 0);              /* neutral-300 */
+  --body: oklch(0.87 0 0);
   --card: oklch(0.205 0 0);
   --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0); /* neutral-400 */
+  --muted-foreground: oklch(0.708 0 0);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --brand: oklch(75% 0.183 55.934);
-  --highlight: oklch(0.954 0.038 75.164); /* orange-100 */
+  --highlight: oklch(0.954 0.038 75.164);
   --card-edge: rgb(255 247 237 / 0.15);
   --card-edge-hover: rgb(255 247 237 / 0.3);
   --card-fill: rgb(0 0 0 / 0.1);
   --code-bg: oklch(0.205 0 0);
   --header-scrolled: rgb(10 10 10 / 0.6);
-  --footer-hairline: rgb(253 186 116); /* orange-300 */
+  --footer-hairline: rgb(253 186 116);
   --syn-comment: oklch(0.6 0 0);
   --syn-keyword: oklch(0.78 0.12 20);
   --syn-string: oklch(0.82 0.1 150);
@@ -34,7 +59,6 @@
   --syn-text: oklch(0.92 0 0);
 }
 
-/* Older stylesheets read these names. They follow the theme. */
 :root {
   --pl-ground: var(--background);
   --pl-surface: var(--card);
@@ -56,8 +80,6 @@
   --pl-card-rest: none;
   --pl-card-lift: none;
 }
-
-/* ---------- Base ---------- */
 
 html {
   background: var(--background);
@@ -93,6 +115,10 @@ a:hover, a:focus-visible {
   text-decoration-color: currentColor;
 }
 
+[id] {
+  scroll-margin-top: 6.5rem;
+}
+
 :focus-visible {
   outline: 2px solid var(--muted-foreground);
   outline-offset: 3px;
@@ -114,7 +140,6 @@ strong {
   font-weight: 600;
 }
 
-/* The highlight phrase: one per paragraph. */
 .highlight-phrase {
   font-family: var(--font-display);
   font-weight: 500;
@@ -122,8 +147,6 @@ strong {
   text-transform: capitalize;
   color: var(--highlight);
 }
-
-/* ---------- Layout ---------- */
 
 .wrapper {
   max-width: 72rem;
@@ -146,7 +169,6 @@ main.page-content .wrapper {
   padding-bottom: 3rem;
 }
 
-/* Reading width for pages and posts. */
 .post {
   max-width: 46rem;
   margin-left: auto;
@@ -159,8 +181,6 @@ main.page-content .wrapper {
 .home > .feed-more {
   display: inline-block;
 }
-
-/* ---------- Header ---------- */
 
 .site-header {
   position: sticky;
@@ -427,7 +447,6 @@ main.page-content .wrapper {
   gap: 0.75rem 1rem;
 }
 
-/* Buttons: one solid per screen, outlines beside it. */
 .hero-cta, .hero-cta:visited {
   display: inline-flex;
   align-items: center;
@@ -504,8 +523,6 @@ main.page-content .wrapper {
     height: 112px;
   }
 }
-
-/* ---------- Page and post titles ---------- */
 
 .post-header {
   margin-bottom: 2rem;
@@ -602,8 +619,6 @@ main.page-content .wrapper {
   color: var(--brand);
 }
 
-/* ---------- Prose ---------- */
-
 .post-content {
   color: var(--body);
   font-size: 1.0625rem;
@@ -623,7 +638,6 @@ blockquote {
   font-style: normal;
 }
 
-/* Code */
 pre, code {
   font-family: var(--font-mono);
   background-color: var(--code-bg);
@@ -669,7 +683,6 @@ div.highlight, pre {
 .highlight .err { color: var(--syn-keyword); background-color: transparent; }
 .highlight .hll { background-color: var(--muted); }
 
-/* Tables */
 table {
   color: var(--body);
   border: 1px solid var(--border);
@@ -703,8 +716,6 @@ table tr:nth-child(even) {
 .breadcrumb a:hover, .breadcrumb a:focus-visible {
   color: var(--brand);
 }
-
-/* ---------- Cards (shared) ---------- */
 
 .card-chai {
   border: 1px solid var(--card-edge);
@@ -931,8 +942,6 @@ table tr:nth-child(even) {
   fill: currentColor;
 }
 
-/* ---------- Motion ---------- */
-
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     transition-duration: 0.01ms !important;
@@ -941,7 +950,6 @@ table tr:nth-child(even) {
   }
 }
 
-/* Component headings inside page content keep their own spacing. */
 .post-content .rec-name,
 .post-content .project-plate-title,
 .post-content .contrib-plate-title {
