@@ -2,6 +2,7 @@
 layout: post
 title: "NestJS REPL: Bringing Back the Rails Console Experience"
 permalink: /bringing-back-the-rails-console-feeling-in-a-nestjs-prisma-world/
+description: "Missing the Rails console in NestJS? A small REPL script around the Prisma client gives you a console for exploring and changing data."
 ---
 
 If you've ever worked with Rails, you're likely familiar with the console, a tool that becomes second nature for exploring models, debugging, or modifying data quickly. Transitioning to NestJS, you might miss this handy feature, as it's not available out of the box. However, you can create your own version.

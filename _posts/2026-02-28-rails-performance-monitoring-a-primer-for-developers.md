@@ -1,3 +1,7 @@
+---
+description: "A top-down approach to finding and fixing slow Rails apps: APM metrics, profiling and benchmarking, and common performance killers like N+1 queries, synchronous external calls, third-party timeouts, and missing database indexes."
+---
+
 "Rails is slow." 
 
 It’s a phrase many developers hear throughout their careers. However, Rails isn’t inherently slow; it becomes slow when we make expensive mistakes in our code and lack the visibility to find them. This guide breaks down a top-down approach to monitoring and fixing performance issues to ensure your application scales effectively.

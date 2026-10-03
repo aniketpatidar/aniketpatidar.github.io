@@ -2,6 +2,7 @@
 layout: post
 title: "Setting Up asdf to Manage Node.js and Ruby on Ubuntu"
 permalink: /setting-up-asdf-to-manage-nodejs-and-ruby-on-ubuntu/
+description: "Install asdf on Ubuntu and use it to manage Node.js and Ruby versions from a single CLI."
 ---
 
 Managing multiple versions of programming languages can be a headache, but asdf simplifies this process by providing a single CLI tool to manage versions of multiple runtime languages. In this article, we'll walk through the steps to install and configure asdf on Ubuntu, along with Node.js and Ruby.
