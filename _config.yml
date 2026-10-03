@@ -21,8 +21,8 @@
 title: Aniket Patidar
 email: aniketpatidar01@gmail.com
 description: >-
-  Software engineer building backend systems in Ruby on Rails, contributing to
-  open source, and writing about software engineering and the Ruby ecosystem.
+  Software engineer who builds, upgrades, and integrates Rails backends for
+  fintech, contributes to open source, and writes about Rails.
 show_excerpts: true
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://aniketpatidar.com" # the base hostname & protocol for your site, e.g. http://example.com
@@ -48,6 +48,10 @@ author:
   name: Aniket Patidar
   email: aniketpatidar01@gmail.com
   description: Software Engineer living in India. I enjoy writing and building web applications with Ruby on Rails.
+  url: https://aniketpatidar.com/
+  image: /images/aniket.jpg
+  job_title: Software Engineer
+  knows_about: [Ruby on Rails, PostgreSQL, TypeScript, Next.js, Open banking]
 image: /images/IMG_20230408_173432_928.jpg
 plugins:
   - jekyll-feed
@@ -61,6 +65,12 @@ collections:
   contributions:
     output: true
     permalink: /contributions/:name/
+
+defaults:
+  - scope: { type: projects }
+    values: { seo: { type: CreativeWork } }
+  - scope: { type: contributions }
+    values: { seo: { type: CreativeWork } }
 exclude:
   - .sass-cache/
   - .jekyll-cache/
@@ -72,7 +82,6 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - DESIGN.md
-  - PRODUCT.md
   - README.md
   - .impeccable/
   - vendor/ruby/

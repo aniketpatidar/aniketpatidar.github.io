@@ -15,7 +15,7 @@
           {%- endif %}
             <li><a href="{{ '/posts/' | relative_url }}">Writing</a></li>
             <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
-            <li><a href="{{ '/resume/' | relative_url }}">Résumé</a></li>
+            <li><a href="{{ '/resume/' | relative_url }}">Resume</a></li>
             <li><a href="{{ '/friends/' | relative_url }}" title="A /friends blog-roll, per slashfriends.org">Friends (blog-roll)</a></li>
             <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
             <li><a href="{{ '/privacy/' | relative_url }}">Privacy</a></li>
@@ -34,3 +34,4 @@
   </div>
 
 </footer>
+{%- if page.profile_page -%}{%- include person-schema.html -%}{%- endif -%}

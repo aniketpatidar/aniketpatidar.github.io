@@ -3,7 +3,7 @@ layout: page
 ---
 
 <nav class="breadcrumb">
-  <a href="/projects/">Projects</a> / {{ page.title }}
+  <a href="/projects/">Projects</a> / {{ page.title }}{% if page.role %} · {{ page.role }}{% endif %}
 </nav>
 
 <link rel="stylesheet" href="{{ '/assets/css/readme.css' | relative_url }}">
