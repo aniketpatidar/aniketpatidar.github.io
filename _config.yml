@@ -37,7 +37,6 @@ header_pages:
   - projects.markdown
   - contributions.markdown
   - recommendations.markdown
-  - resume.markdown
 minima:
   social_links:
     - { title: "GitHub", url: "https://github.com/aniketpatidar", icon: "github" }
