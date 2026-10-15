@@ -18,7 +18,5 @@ hero_proof:
 hero_ctas:
   - label: See my work
     url: /projects/
-  - label: Résumé
-    url: /resume/
 list_heading: Latest writing
 ---
